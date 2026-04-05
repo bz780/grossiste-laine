@@ -3,542 +3,947 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Grossiste Laine — Achat en Gros de Laine à Tricoter | Pelotes & Fils</title>
-<meta name="description" content="Trouvez les meilleurs grossistes laine en France. Achat en gros de pelotes, fils à tricoter, laine mérinos, alpaga et acrylique. Comparez les prix et commandez dès 50€.">
+<title>Grossiste Laine — Fournisseur de Laine en Gros | Prix Pro Dégressifs</title>
+<meta name="description" content="Votre grossiste laine professionnel. Mérinos, alpaga, mohair, cachemire — plus de 5 000 références en stock. Prix dégressifs dès 50 pelotes. Livraison 24-48h. Devis gratuit.">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://grossiste-laine.pages.dev/">
-<meta property="og:title" content="Grossiste Laine — Achat en Gros de Pelotes et Fils">
-<meta property="og:description" content="Les meilleurs grossistes laine en France. Mérinos, alpaga, acrylique — livraison rapide, prix pro.">
-<meta property="og:type" content="website">
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Grossiste Laine — Achat en Gros",
-  "description": "Comparatif des meilleurs grossistes laine en France pour particuliers et professionnels.",
-  "dateModified": "2026-04-05",
-  "inLanguage": "fr-FR"
-}
-</script>
+<link rel="canonical" href="https://grossiste-laine.fr/">
 
 <style>
-  :root {
-    --primary: #6b4c8a;
-    --primary-dark: #4e3569;
-    --accent: #e8a87c;
-    --bg: #faf8f5;
-    --bg-card: #ffffff;
-    --text: #2d2d2d;
-    --text-muted: #6b6b6b;
-    --border: #e8e0d5;
-    --success: #3a7d44;
-    --radius: 10px;
-    --shadow: 0 2px 16px rgba(0,0,0,.08);
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-  }
-  a { color: var(--primary); text-decoration: none; }
-  a:hover { text-decoration: underline; }
+:root {
+  --ink: #1a1a2e;
+  --ink-light: #4a4a6a;
+  --purple: #6b4c8a;
+  --purple-dark: #4e3569;
+  --purple-light: #f0ebf6;
+  --gold: #c9962b;
+  --gold-light: #fdf6e3;
+  --green: #2e7d52;
+  --green-light: #edf7f1;
+  --bg: #f8f7f5;
+  --white: #ffffff;
+  --border: #e4dff0;
+  --shadow-sm: 0 1px 4px rgba(0,0,0,.06);
+  --shadow: 0 4px 20px rgba(0,0,0,.09);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,.13);
+  --radius: 12px;
+  --radius-sm: 8px;
+}
 
-  /* HEADER */
-  header {
-    background: var(--primary);
-    color: #fff;
-    padding: 14px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,.2);
-  }
-  .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: -.5px; }
-  .logo span { color: var(--accent); }
-  nav a {
-    color: rgba(255,255,255,.85);
-    margin-left: 20px;
-    font-size: .9rem;
-  }
-  nav a:hover { color: #fff; text-decoration: none; }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--ink); line-height: 1.65; font-size: 15px; }
+img { max-width: 100%; display: block; }
+a { color: var(--purple); text-decoration: none; }
+a:hover { text-decoration: underline; }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, var(--primary) 0%, #8e6aac 100%);
-    color: #fff;
-    padding: 70px 20px 60px;
-    text-align: center;
-  }
-  .hero h1 {
-    font-size: clamp(1.7rem, 4vw, 2.8rem);
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 16px;
-  }
-  .hero p {
-    font-size: 1.1rem;
-    opacity: .9;
-    max-width: 600px;
-    margin: 0 auto 28px;
-  }
-  .hero-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 32px;
-  }
-  .badge {
-    background: rgba(255,255,255,.15);
-    border: 1px solid rgba(255,255,255,.3);
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: .85rem;
-  }
-  .btn {
-    display: inline-block;
-    background: var(--accent);
-    color: #fff;
-    padding: 14px 32px;
-    border-radius: var(--radius);
-    font-weight: 700;
-    font-size: 1rem;
-    transition: transform .15s, box-shadow .15s;
-    box-shadow: 0 4px 14px rgba(0,0,0,.2);
-  }
-  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.25); text-decoration: none; }
-  .btn-outline {
-    background: transparent;
-    border: 2px solid #fff;
-    color: #fff;
-    margin-left: 12px;
-  }
+/* ── UTILS ── */
+.container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 72px 0; }
+.section-sm { padding: 48px 0; }
+.tag {
+  display: inline-block;
+  background: var(--purple-light);
+  color: var(--purple);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.section-title { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: var(--ink); margin-bottom: 10px; line-height: 1.25; }
+.section-desc { color: var(--ink-light); font-size: 1rem; max-width: 580px; margin-bottom: 44px; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
 
-  /* CONTAINER */
-  .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
-  section { padding: 60px 0; }
+/* ── HEADER ── */
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+.header-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 64px;
+}
+.logo {
+  font-size: 1.25rem; font-weight: 800; color: var(--ink);
+  letter-spacing: -.5px;
+}
+.logo span { color: var(--purple); }
+.header-right { display: flex; align-items: center; gap: 24px; }
+.header-contact { font-size: .85rem; color: var(--ink-light); }
+.header-contact strong { color: var(--ink); }
+.btn-header {
+  background: var(--purple); color: var(--white);
+  padding: 9px 20px; border-radius: var(--radius-sm);
+  font-size: .88rem; font-weight: 600;
+  transition: background .15s;
+  white-space: nowrap;
+}
+.btn-header:hover { background: var(--purple-dark); text-decoration: none; }
 
-  /* SECTION TITLES */
-  .section-title {
-    font-size: 1.7rem;
-    font-weight: 700;
-    margin-bottom: 8px;
-    color: var(--primary-dark);
-  }
-  .section-subtitle {
-    color: var(--text-muted);
-    font-size: 1rem;
-    margin-bottom: 36px;
-  }
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, var(--ink) 0%, #2d1f4e 100%);
+  color: var(--white);
+  padding: 80px 0 72px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 80% 50%, rgba(107,76,138,.4) 0%, transparent 60%);
+}
+.hero-content { position: relative; max-width: 680px; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+  border-radius: 20px; padding: 5px 14px;
+  font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 900; line-height: 1.1; margin-bottom: 20px;
+  letter-spacing: -.5px;
+}
+.hero h1 em { font-style: normal; color: #c5a8e0; }
+.hero-sub { font-size: 1.1rem; opacity: .85; margin-bottom: 36px; max-width: 520px; line-height: 1.6; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+.btn-primary {
+  background: var(--purple); color: var(--white);
+  padding: 14px 28px; border-radius: var(--radius-sm);
+  font-weight: 700; font-size: 1rem;
+  transition: transform .15s, box-shadow .15s, background .15s;
+  box-shadow: 0 4px 18px rgba(107,76,138,.5);
+}
+.btn-primary:hover { background: #7d5aa0; transform: translateY(-1px); box-shadow: 0 6px 24px rgba(107,76,138,.6); text-decoration: none; }
+.btn-secondary {
+  background: rgba(255,255,255,.1); color: var(--white);
+  border: 1.5px solid rgba(255,255,255,.3);
+  padding: 14px 28px; border-radius: var(--radius-sm);
+  font-weight: 600; font-size: 1rem;
+  transition: background .15s;
+}
+.btn-secondary:hover { background: rgba(255,255,255,.18); text-decoration: none; }
+.hero-stats {
+  display: flex; flex-wrap: wrap; gap: 32px;
+  border-top: 1px solid rgba(255,255,255,.12);
+  padding-top: 32px;
+}
+.hero-stat .num { font-size: 1.8rem; font-weight: 800; color: var(--white); }
+.hero-stat .label { font-size: .8rem; color: rgba(255,255,255,.6); }
 
-  /* CARDS */
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
-  .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 28px;
-    box-shadow: var(--shadow);
-    transition: transform .15s, box-shadow .15s;
-  }
-  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,.12); }
-  .card-rank {
-    font-size: .75rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-  .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; color: var(--primary-dark); }
-  .card .rating { color: #f5a623; font-size: 1.1rem; margin-bottom: 10px; }
-  .card .price-tag {
-    background: #f0faf2;
-    color: var(--success);
-    border: 1px solid #c3e6cb;
-    border-radius: 6px;
-    padding: 4px 10px;
-    font-size: .85rem;
-    font-weight: 600;
-    display: inline-block;
-    margin-bottom: 12px;
-  }
-  .card p { color: var(--text-muted); font-size: .9rem; line-height: 1.6; margin-bottom: 18px; }
-  .card ul { list-style: none; margin-bottom: 20px; }
-  .card ul li { font-size: .88rem; color: var(--text-muted); padding: 3px 0; padding-left: 18px; position: relative; }
-  .card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
-  .card .btn-card {
-    display: block;
-    text-align: center;
-    background: var(--primary);
-    color: #fff;
-    padding: 11px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: .9rem;
-    transition: background .15s;
-  }
-  .card .btn-card:hover { background: var(--primary-dark); text-decoration: none; }
-  .card.top-pick { border: 2px solid var(--primary); position: relative; }
-  .top-badge {
-    position: absolute;
-    top: -12px;
-    left: 20px;
-    background: var(--primary);
-    color: #fff;
-    padding: 3px 12px;
-    border-radius: 12px;
-    font-size: .75rem;
-    font-weight: 700;
-  }
+/* ── TRUST BAR ── */
+.trust-bar { background: var(--purple-dark); color: var(--white); padding: 16px 0; }
+.trust-list { display: flex; flex-wrap: wrap; gap: 0; justify-content: center; }
+.trust-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 0 28px; font-size: .85rem; font-weight: 500;
+  border-right: 1px solid rgba(255,255,255,.15);
+}
+.trust-item:last-child { border-right: none; }
+.trust-item .icon { font-size: 1rem; }
 
-  /* INFO GRID */
-  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
-  .info-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
-  .info-icon { font-size: 1.8rem; flex-shrink: 0; }
-  .info-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--primary-dark); }
-  .info-card p { font-size: .88rem; color: var(--text-muted); line-height: 1.5; }
+/* ── BRANDS ── */
+.brands-section { background: var(--white); }
+.brands-label { text-align: center; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 28px; }
+.brands-grid {
+  display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center;
+}
+.brand-pill {
+  display: flex; align-items: center; gap: 8px;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 40px; padding: 10px 20px;
+  font-size: .9rem; font-weight: 600; color: var(--ink);
+  transition: border-color .15s, box-shadow .15s;
+}
+.brand-pill:hover { border-color: var(--purple); box-shadow: 0 0 0 3px var(--purple-light); }
+.brand-pill .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--purple); flex-shrink: 0; }
 
-  /* TYPES DE LAINE */
-  .types-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-  .type-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 20px;
-    text-align: center;
-  }
-  .type-card .type-icon { font-size: 2rem; margin-bottom: 8px; }
-  .type-card h4 { font-size: 1rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px; }
-  .type-card p { font-size: .83rem; color: var(--text-muted); }
+/* ── CATALOGUE ── */
+.catalogue-section { background: var(--bg); }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+.product-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s, box-shadow .2s;
+}
+.product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.product-thumb {
+  height: 160px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3.5rem;
+  position: relative;
+}
+.product-badge {
+  position: absolute; top: 12px; left: 12px;
+  background: var(--purple); color: var(--white);
+  font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 4px;
+}
+.product-badge.gold { background: var(--gold); }
+.product-badge.green { background: var(--green); }
+.product-body { padding: 18px 20px 20px; }
+.product-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 8px; }
+.meta-chip {
+  font-size: .72rem; font-weight: 600; color: var(--ink-light);
+  background: var(--bg); border: 1px solid var(--border);
+  padding: 2px 8px; border-radius: 4px;
+}
+.product-name { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--ink); }
+.product-desc { font-size: .83rem; color: var(--ink-light); line-height: 1.5; margin-bottom: 14px; }
+.product-pricing { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+.price-new { font-size: 1.35rem; font-weight: 800; color: var(--purple); }
+.price-old { font-size: .9rem; color: var(--ink-light); text-decoration: line-through; }
+.price-unit { font-size: .75rem; color: var(--ink-light); }
+.product-moq { font-size: .75rem; color: var(--ink-light); margin-bottom: 14px; }
+.btn-product {
+  display: block; text-align: center;
+  background: var(--purple-light); color: var(--purple);
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  padding: 10px; font-weight: 700; font-size: .88rem;
+  transition: background .15s, color .15s, border-color .15s;
+}
+.btn-product:hover { background: var(--purple); color: var(--white); border-color: var(--purple); text-decoration: none; }
 
-  /* BG VARIANTS */
-  .bg-light { background: #f2edf7; }
-  .bg-white { background: #fff; }
+/* ── PRICING ── */
+.pricing-section { background: var(--white); }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.pricing-card {
+  border: 1.5px solid var(--border); border-radius: var(--radius);
+  padding: 28px; position: relative; background: var(--white);
+  transition: transform .2s, box-shadow .2s;
+}
+.pricing-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.pricing-card.featured {
+  border-color: var(--purple); background: var(--purple);
+  color: var(--white);
+}
+.popular-badge {
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--gold); color: var(--white);
+  font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+  padding: 4px 14px; border-radius: 20px; white-space: nowrap;
+}
+.pricing-tier { font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
+.pricing-card:not(.featured) .pricing-tier { color: var(--ink-light); }
+.pricing-card.featured .pricing-tier { color: rgba(255,255,255,.7); }
+.pricing-name { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
+.pricing-moq { font-size: .85rem; margin-bottom: 20px; }
+.pricing-card:not(.featured) .pricing-moq { color: var(--ink-light); }
+.pricing-card.featured .pricing-moq { color: rgba(255,255,255,.75); }
+.pricing-discount {
+  font-size: 2.5rem; font-weight: 900; line-height: 1;
+  margin-bottom: 20px;
+}
+.pricing-card:not(.featured) .pricing-discount { color: var(--purple); }
+.pricing-card.featured .pricing-discount { color: var(--white); }
+.pricing-features { list-style: none; margin-bottom: 24px; }
+.pricing-features li {
+  display: flex; align-items: center; gap: 8px;
+  font-size: .88rem; padding: 5px 0;
+}
+.pricing-card:not(.featured) .pricing-features li { color: var(--ink-light); }
+.pricing-card.featured .pricing-features li { color: rgba(255,255,255,.9); }
+.pricing-features .check { color: var(--green); font-weight: 700; flex-shrink: 0; }
+.pricing-card.featured .pricing-features .check { color: #7fffb0; }
+.btn-pricing-white {
+  display: block; text-align: center;
+  background: var(--white); color: var(--purple);
+  padding: 12px; border-radius: var(--radius-sm);
+  font-weight: 700; font-size: .9rem;
+  transition: background .15s;
+}
+.btn-pricing-white:hover { background: rgba(255,255,255,.9); text-decoration: none; }
+.btn-pricing {
+  display: block; text-align: center;
+  background: var(--purple-light); color: var(--purple);
+  border: 1.5px solid var(--border);
+  padding: 12px; border-radius: var(--radius-sm);
+  font-weight: 700; font-size: .9rem;
+  transition: background .15s, color .15s;
+}
+.btn-pricing:hover { background: var(--purple); color: var(--white); text-decoration: none; }
+.pricing-note {
+  margin-top: 24px;
+  background: var(--gold-light); border: 1px solid #f0d89a;
+  border-radius: var(--radius); padding: 20px 24px;
+  display: flex; align-items: center; gap: 16px;
+}
+.pricing-note .icon { font-size: 1.5rem; flex-shrink: 0; }
+.pricing-note strong { color: var(--gold); }
+.pricing-note p { font-size: .9rem; color: var(--ink-light); }
 
-  /* FAQ */
-  .faq-list { max-width: 720px; }
-  details {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    margin-bottom: 12px;
-    overflow: hidden;
-  }
-  summary {
-    padding: 18px 20px;
-    cursor: pointer;
-    font-weight: 600;
-    font-size: .95rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-  }
-  summary::after { content: '+'; font-size: 1.2rem; color: var(--primary); }
-  details[open] summary::after { content: '−'; }
-  details p { padding: 0 20px 18px; color: var(--text-muted); font-size: .9rem; line-height: 1.7; }
+/* ── FIBRES ── */
+.fibres-section { background: var(--bg); }
+.fibres-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; }
+.fibre-card {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+  display: flex; gap: 16px; align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s, box-shadow .15s;
+}
+.fibre-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.fibre-icon { font-size: 2.2rem; flex-shrink: 0; }
+.fibre-name { font-size: 1rem; font-weight: 700; color: var(--purple-dark); margin-bottom: 6px; }
+.fibre-desc { font-size: .85rem; color: var(--ink-light); line-height: 1.55; margin-bottom: 12px; }
+.fibre-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.fibre-chip {
+  font-size: .72rem; font-weight: 600;
+  background: var(--purple-light); color: var(--purple);
+  padding: 2px 8px; border-radius: 4px;
+}
 
-  /* CTA BAND */
-  .cta-band {
-    background: linear-gradient(135deg, var(--primary) 0%, #8e6aac 100%);
-    color: #fff;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  .cta-band h2 { font-size: 1.8rem; margin-bottom: 12px; }
-  .cta-band p { opacity: .9; margin-bottom: 28px; font-size: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; margin-bottom: 28px; }
+/* ── TESTIMONIALS ── */
+.testi-section { background: var(--white); }
+.testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.testi-card {
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 24px;
+}
+.stars { color: #f5a623; font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
+.testi-text { font-size: .9rem; color: var(--ink-light); line-height: 1.65; margin-bottom: 16px; font-style: italic; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-avatar {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--purple); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: .9rem; flex-shrink: 0;
+}
+.testi-name { font-weight: 700; font-size: .9rem; }
+.testi-role { font-size: .78rem; color: var(--ink-light); }
+.testi-rating { margin-top: 32px; text-align: center; }
+.testi-rating .big { font-size: 3rem; font-weight: 900; color: var(--purple); }
+.testi-rating .sub { font-size: .85rem; color: var(--ink-light); }
 
-  /* DATE */
-  .last-updated { text-align: center; color: var(--text-muted); font-size: .8rem; margin-top: 8px; }
-  time.updated { font-style: italic; }
+/* ── FAQ ── */
+.faq-section { background: var(--bg); }
+.faq-wrap { max-width: 740px; }
+details {
+  background: var(--white); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); margin-bottom: 10px;
+}
+summary {
+  padding: 18px 22px; cursor: pointer;
+  font-weight: 600; font-size: .95rem;
+  list-style: none; display: flex; justify-content: space-between; align-items: center;
+  color: var(--ink);
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; font-size: 1.3rem; color: var(--purple); font-weight: 400; flex-shrink: 0; }
+details[open] summary::after { content: '−'; }
+details p { padding: 0 22px 18px; font-size: .9rem; color: var(--ink-light); line-height: 1.7; }
 
-  /* FOOTER */
-  footer {
-    background: #1a1a2e;
-    color: rgba(255,255,255,.6);
-    text-align: center;
-    padding: 30px 20px;
-    font-size: .82rem;
-  }
-  footer a { color: rgba(255,255,255,.7); }
+/* ── CONTACT ── */
+.contact-section { background: linear-gradient(135deg, var(--ink) 0%, #2d1f4e 100%); color: var(--white); }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.contact-left h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; margin-bottom: 14px; }
+.contact-left p { opacity: .8; margin-bottom: 28px; line-height: 1.65; }
+.contact-info { list-style: none; }
+.contact-info li { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; font-size: .9rem; opacity: .85; }
+.contact-info .ci-icon { font-size: 1rem; flex-shrink: 0; }
+.contact-form-box {
+  background: var(--white); border-radius: var(--radius);
+  padding: 32px; box-shadow: var(--shadow-lg);
+}
+.contact-form-box h3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); margin-bottom: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.form-group { margin-bottom: 14px; }
+.form-group label { display: block; font-size: .82rem; font-weight: 600; color: var(--ink-light); margin-bottom: 5px; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  font-size: .9rem; color: var(--ink);
+  background: var(--bg);
+  transition: border-color .15s, box-shadow .15s;
+  font-family: inherit;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none; border-color: var(--purple);
+  box-shadow: 0 0 0 3px var(--purple-light);
+}
+.form-group textarea { resize: vertical; min-height: 90px; }
+.btn-submit {
+  width: 100%;
+  background: var(--purple); color: var(--white);
+  padding: 13px; border: none; border-radius: var(--radius-sm);
+  font-size: 1rem; font-weight: 700; cursor: pointer;
+  transition: background .15s, transform .15s;
+  font-family: inherit;
+}
+.btn-submit:hover { background: var(--purple-dark); transform: translateY(-1px); }
+.form-note { font-size: .75rem; color: var(--ink-light); text-align: center; margin-top: 10px; }
 
-  @media (max-width: 600px) {
-    .hero { padding: 50px 16px 40px; }
-    .btn-outline { display: block; margin: 12px auto 0; }
-    nav { display: none; }
-  }
+/* ── CERTIFS ── */
+.certifs { background: var(--white); padding: 32px 0; border-top: 1px solid var(--border); }
+.certif-list { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; }
+.certif-item {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: 6px; padding: 8px 14px;
+  font-size: .8rem; font-weight: 600; color: var(--ink-light);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: #0f0f1e; color: rgba(255,255,255,.45);
+  text-align: center; padding: 24px 20px; font-size: .82rem;
+}
+footer a { color: rgba(255,255,255,.55); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .header-contact { display: none; }
+  .hero { padding: 56px 0 48px; }
+  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  .form-row { grid-template-columns: 1fr; }
+  .trust-item { padding: 0 16px; font-size: .78rem; }
+}
+@media (max-width: 500px) {
+  .hero-stats { gap: 20px; }
+  .trust-list { gap: 8px; }
+}
 </style>
 </head>
 <body>
 
 <!-- HEADER -->
 <header>
-  <div class="logo">Grossiste<span>Laine</span>.fr</div>
-  <nav>
-    <a href="#comparatif">Comparatif</a>
-    <a href="#types">Types de laine</a>
-    <a href="#conseils">Conseils</a>
-    <a href="#faq">FAQ</a>
-  </nav>
+  <div class="container header-inner">
+    <div class="logo">Grossiste<span>Laine</span></div>
+    <div class="header-right">
+      <div class="header-contact">
+        <strong>07 56 95 29 29</strong> · Lun–Ven 9h–18h
+      </div>
+      <a href="#contact" class="btn-header">Demander un devis</a>
+    </div>
+  </div>
 </header>
 
 <!-- HERO -->
-<div class="hero">
-  <h1>Achat en Gros de Laine &amp; Fils à Tricoter</h1>
-  <p>Comparez les meilleurs grossistes laine en France. Mérinos, alpaga, acrylique — prix pro, livraison rapide dès 50€ de commande.</p>
-  <div class="hero-badges">
-    <span class="badge">🧶 +200 références</span>
-    <span class="badge">🚚 Livraison 24-48h</span>
-    <span class="badge">💼 Tarifs professionnels</span>
-    <span class="badge">⭐ Sélection 2026</span>
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-eyebrow">🧶 Fournisseur professionnel depuis 2009</div>
+      <h1>Votre grossiste <em>laine</em> en France</h1>
+      <p class="hero-sub">Plus de 5 000 références en stock permanent. Mérinos, alpaga, mohair, cachemire — prix dégressifs dès 50 pelotes, livraison express sous 24-48h partout en France.</p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
+        <a href="#catalogue" class="btn-secondary">Voir le catalogue</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">5 000+</div><div class="label">références en stock</div></div>
+        <div class="hero-stat"><div class="num">3 500+</div><div class="label">clients professionnels</div></div>
+        <div class="hero-stat"><div class="num">−40%</div><div class="label">remise max volume</div></div>
+        <div class="hero-stat"><div class="num">24h</div><div class="label">délai d'expédition</div></div>
+      </div>
+    </div>
   </div>
-  <a href="#comparatif" class="btn">Voir le comparatif</a>
-  <a href="#types" class="btn btn-outline">Types de laine</a>
-  <p class="last-updated"><time datetime="2026-04-05" class="updated">5 avril 2026</time></p>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="container">
+    <div class="trust-list">
+      <div class="trust-item"><span class="icon">🚚</span> Livraison express 24-48h</div>
+      <div class="trust-item"><span class="icon">💰</span> Prix dégressifs dès 50 pelotes</div>
+      <div class="trust-item"><span class="icon">📦</span> Stock permanent 5 000 réf.</div>
+      <div class="trust-item"><span class="icon">🔒</span> Paiement différé jusqu'à 90j</div>
+      <div class="trust-item"><span class="icon">🎨</span> Nuanciers & échantillons gratuits</div>
+    </div>
+  </div>
 </div>
 
-<!-- COMPARATIF -->
-<section id="comparatif">
+<!-- MARQUES -->
+<section class="brands-section section-sm">
   <div class="container">
-    <h2 class="section-title">Les Meilleurs Grossistes Laine en 2026</h2>
-    <p class="section-subtitle">Sélection mise à jour régulièrement — rapports qualité/prix, gamme et conditions de gros.</p>
+    <p class="brands-label">Distribution officielle</p>
+    <div class="brands-grid">
+      <div class="brand-pill"><span class="dot"></span>Phildar</div>
+      <div class="brand-pill"><span class="dot"></span>Bergère de France</div>
+      <div class="brand-pill"><span class="dot"></span>Drops Design</div>
+      <div class="brand-pill"><span class="dot"></span>DMC</div>
+      <div class="brand-pill"><span class="dot"></span>Katia</div>
+      <div class="brand-pill"><span class="dot"></span>Rico Design</div>
+      <div class="brand-pill"><span class="dot"></span>Laines Du Nord</div>
+      <div class="brand-pill"><span class="dot"></span>Paintbox Yarns</div>
+    </div>
+  </div>
+</section>
 
-    <div class="cards">
+<!-- CATALOGUE -->
+<section class="catalogue-section section" id="catalogue">
+  <div class="container">
+    <span class="tag">Catalogue grossiste</span>
+    <h2 class="section-title">Nos laines en gros</h2>
+    <p class="section-desc">Sélection permanente, réassort hebdomadaire. Tous les prix sont en HT et incluent la remise Starter (−15%).</p>
 
-      <div class="card top-pick">
-        <span class="top-badge">⭐ Meilleur choix</span>
-        <div class="card-rank">N°1 — Grossiste</div>
-        <h3>LaMercerie Pro</h3>
-        <div class="rating">★★★★★</div>
-        <span class="price-tag">Dès 50€ HT</span>
-        <p>Le référent du négoce de laine en France. Plus de 500 coloris disponibles, réassort hebdomadaire et tarifs dégressifs à partir de 5 kg.</p>
-        <ul>
-          <li>Mérinos, alpaga, cachemire</li>
-          <li>Tarifs dégressifs par kg</li>
-          <li>Livraison 24h en France</li>
-          <li>Échantillons gratuits</li>
-          <li>Paiement 30j pour pros</li>
-        </ul>
-        <a href="#" class="btn-card" rel="nofollow sponsored">Voir les tarifs →</a>
+    <div class="products-grid">
+
+      <div class="product-card">
+        <div class="product-thumb" style="background:#f5f0fa;">🐑
+          <span class="product-badge">Bestseller</span>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="meta-chip">100% Mérinos</span>
+            <span class="meta-chip">50g</span>
+            <span class="meta-chip">60 coloris</span>
+          </div>
+          <div class="product-name">Mérinos Extra-Fine</div>
+          <p class="product-desc">Notre référence phare. Douceur superwash, thermique, polyvalente. Idéale pull, bonnets, layette adulte.</p>
+          <div class="product-pricing">
+            <span class="price-new">2,90€</span>
+            <span class="price-old">4,50€</span>
+            <span class="price-unit">HT/pelote</span>
+          </div>
+          <p class="product-moq">À partir de 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="card-rank">N°2 — Grossiste</div>
-        <h3>FilsPro France</h3>
-        <div class="rating">★★★★☆</div>
-        <span class="price-tag">Dès 75€ HT</span>
-        <p>Spécialiste des fils techniques et laines naturelles pour artisans et boutiques. Large choix de conditionnements (100g à 500g).</p>
-        <ul>
-          <li>Laine bio certifiée GOTS</li>
-          <li>Fils recyclés disponibles</li>
-          <li>Click &amp; Collect possible</li>
-          <li>Conseil personnalisé</li>
-        </ul>
-        <a href="#" class="btn-card" rel="nofollow sponsored">Découvrir l'offre →</a>
+      <div class="product-card">
+        <div class="product-thumb" style="background:#fdf6ed;">🦙
+          <span class="product-badge gold">Premium</span>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="meta-chip">100% Baby Alpaga</span>
+            <span class="meta-chip">100g</span>
+            <span class="meta-chip">25 coloris</span>
+          </div>
+          <div class="product-name">Alpaga Baby Import Pérou</div>
+          <p class="product-desc">Hypoallergénique, 7× plus chaud que la laine de mouton. Certification éthique. Import direct sélectionné.</p>
+          <div class="product-pricing">
+            <span class="price-new">7,90€</span>
+            <span class="price-old">12,90€</span>
+            <span class="price-unit">HT/pelote</span>
+          </div>
+          <p class="product-moq">À partir de 50 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
       </div>
 
-      <div class="card">
-        <div class="card-rank">N°3 — Import direct</div>
-        <h3>EuroWool Direct</h3>
-        <div class="rating">★★★★☆</div>
-        <span class="price-tag">Dès 100€ HT</span>
-        <p>Importateur direct depuis l'Espagne et le Portugal. Idéal pour les gros volumes — prix imbattables à partir de 20 kg, délai 3-5 jours.</p>
-        <ul>
-          <li>Prix usine à partir de 20 kg</li>
-          <li>Laine mérinos fine 17-19 microns</li>
-          <li>Personnalisation couleur possible</li>
-          <li>Paiement échelonné</li>
-        </ul>
-        <a href="#" class="btn-card" rel="nofollow sponsored">Demander un devis →</a>
+      <div class="product-card">
+        <div class="product-thumb" style="background:#f0f7ff;">✨
+          <span class="product-badge">Pro</span>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="meta-chip">70% Mohair / 30% Soie</span>
+            <span class="meta-chip">25g</span>
+            <span class="meta-chip">35 coloris</span>
+          </div>
+          <div class="product-name">Mohair-Soie Professionnel</div>
+          <p class="product-desc">Brillance naturelle, légèreté aérienne. Production française tracée. Référence des créateurs de mode.</p>
+          <div class="product-pricing">
+            <span class="price-new">4,20€</span>
+            <span class="price-old">6,90€</span>
+            <span class="price-unit">HT/pelote</span>
+          </div>
+          <p class="product-moq">À partir de 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb" style="background:#edf7f1;">🌿
+          <span class="product-badge green">Bio GOTS</span>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="meta-chip">100% Coton Bio</span>
+            <span class="meta-chip">50g</span>
+            <span class="meta-chip">80 coloris</span>
+          </div>
+          <div class="product-name">Coton Biologique GOTS</div>
+          <p class="product-desc">Certifié GOTS & Oeko-Tex. Coton peigné égyptien, doux et résistant. Idéal crochet, layette, décoration.</p>
+          <div class="product-pricing">
+            <span class="price-new">2,10€</span>
+            <span class="price-old">3,90€</span>
+            <span class="price-unit">HT/pelote</span>
+          </div>
+          <p class="product-moq">À partir de 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb" style="background:#fdf0f6;">👑
+          <span class="product-badge gold">Luxe</span>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="meta-chip">50% Cachemire / 50% Alpaga</span>
+            <span class="meta-chip">50g</span>
+            <span class="meta-chip">15 coloris</span>
+          </div>
+          <div class="product-name">Cachemire-Alpaga Luxe</div>
+          <p class="product-desc">Mélange d'exception. Import Mongolie intérieure & Pérou. Chaleur et douceur incomparables. Collection hiver.</p>
+          <div class="product-pricing">
+            <span class="price-new">11,90€</span>
+            <span class="price-old">18,90€</span>
+            <span class="price-unit">HT/pelote</span>
+          </div>
+          <p class="product-moq">À partir de 25 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-thumb" style="background:#eefaf5;">♻️
+          <span class="product-badge green">GRS</span>
+        </div>
+        <div class="product-body">
+          <div class="product-meta">
+            <span class="meta-chip">Laine Recyclée</span>
+            <span class="meta-chip">100g</span>
+            <span class="meta-chip">40 coloris</span>
+          </div>
+          <div class="product-name">Laine Recyclée Certifiée GRS</div>
+          <p class="product-desc">Fibres régénérées, certifiées Global Recycled Standard. Empreinte carbone réduite. Parfait pour les marques engagées.</p>
+          <div class="product-pricing">
+            <span class="price-new">2,40€</span>
+            <span class="price-old">3,70€</span>
+            <span class="price-unit">HT/pelote</span>
+          </div>
+          <p class="product-moq">À partir de 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- POURQUOI ACHETER EN GROS -->
-<section id="conseils" class="bg-light">
+<!-- TARIFS DÉGRESSIFS -->
+<section class="pricing-section section" id="tarifs">
   <div class="container">
-    <h2 class="section-title">Pourquoi Acheter la Laine en Gros ?</h2>
-    <p class="section-subtitle">Les avantages concrets de passer par un grossiste plutôt que la vente au détail.</p>
+    <span class="tag">Tarification pro</span>
+    <h2 class="section-title">Prix dégressifs selon vos volumes</h2>
+    <p class="section-desc">Des remises immédiates qui s'appliquent à l'ensemble de votre commande, sans conditions cachées.</p>
 
-    <div class="info-grid">
-      <div class="info-card">
-        <div class="info-icon">💰</div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Niveau 1</div>
+        <div class="pricing-name">Starter</div>
+        <div class="pricing-moq">Dès 50 pelotes</div>
+        <div class="pricing-discount">−15%</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Remise immédiate 15%</li>
+          <li><span class="check">✓</span> Livraison gratuite dès 300€</li>
+          <li><span class="check">✓</span> Accès catalogue complet</li>
+          <li><span class="check">✓</span> Nuancier couleurs offert</li>
+        </ul>
+        <a href="#contact" class="btn-pricing">Ouvrir un compte</a>
+      </div>
+
+      <div class="pricing-card featured">
+        <span class="popular-badge">Le plus choisi</span>
+        <div class="pricing-tier">Niveau 2</div>
+        <div class="pricing-name">Professionnel</div>
+        <div class="pricing-moq">Dès 200 pelotes</div>
+        <div class="pricing-discount">−30%</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Remise immédiate 30%</li>
+          <li><span class="check">✓</span> Livraison toujours gratuite</li>
+          <li><span class="check">✓</span> Conseiller dédié</li>
+          <li><span class="check">✓</span> Paiement 60 jours</li>
+          <li><span class="check">✓</span> Accès avant-premières</li>
+        </ul>
+        <a href="#contact" class="btn-pricing-white">Ouvrir un compte</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="pricing-tier">Niveau 3</div>
+        <div class="pricing-name">Entreprise</div>
+        <div class="pricing-moq">Dès 500 pelotes</div>
+        <div class="pricing-discount">−40%</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Remise immédiate 40%</li>
+          <li><span class="check">✓</span> Livraison express gratuite</li>
+          <li><span class="check">✓</span> Account manager VIP</li>
+          <li><span class="check">✓</span> Paiement 90 jours</li>
+          <li><span class="check">✓</span> Collections sur-mesure</li>
+        </ul>
+        <a href="#contact" class="btn-pricing">Ouvrir un compte</a>
+      </div>
+
+    </div>
+
+    <div class="pricing-note">
+      <div class="icon">🎯</div>
+      <div>
+        <strong>Volumes > 1 000 pelotes/mois ?</strong>
+        <p>Contactez-nous pour un tarif personnalisé, des conditions de livraison dédiées et un accompagnement sur-mesure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FIBRES -->
+<section class="fibres-section section" id="fibres">
+  <div class="container">
+    <span class="tag">Guide des matières</span>
+    <h2 class="section-title">Toutes les fibres disponibles en gros</h2>
+    <p class="section-desc">Chaque matière a ses propriétés et ses usages. Notre équipe vous conseille sur le choix le plus adapté à vos projets.</p>
+
+    <div class="fibres-grid">
+      <div class="fibre-card">
+        <div class="fibre-icon">🐑</div>
         <div>
-          <h4>Économies substantielles</h4>
-          <p>En achetant au kilo ou par lot, vous pouvez économiser jusqu'à 40% par rapport au prix de détail. Idéal pour les associations, ateliers et boutiques.</p>
+          <div class="fibre-name">Laine Mérinos</div>
+          <p class="fibre-desc">Fibre fine (17–21 microns), douce, thermorégulatrice et résistante aux odeurs. Notre gamme mérinos couvre du sport au chunky, avec options superwash pour l'entretien facilité.</p>
+          <div class="fibre-chips">
+            <span class="fibre-chip">Extra-fine</span>
+            <span class="fibre-chip">Superwash</span>
+            <span class="fibre-chip">Mulesing-free</span>
+          </div>
         </div>
       </div>
-      <div class="info-card">
-        <div class="info-icon">🎨</div>
+      <div class="fibre-card">
+        <div class="fibre-icon">🦙</div>
         <div>
-          <h4>Homogénéité des lots</h4>
-          <p>Commandez suffisamment pour finir votre projet sans rupture de teinte. Les grossistes garantissent la même dye lot sur les grandes quantités.</p>
+          <div class="fibre-name">Alpaga & Baby Alpaga</div>
+          <p class="fibre-desc">Importé directement du Pérou et de Bolivie. Hypoallergénique, 7× plus chaud que la laine de mouton, d'une légèreté remarquable. Le baby alpaga est notre référence luxe accessible.</p>
+          <div class="fibre-chips">
+            <span class="fibre-chip">Hypoallergénique</span>
+            <span class="fibre-chip">Import direct</span>
+            <span class="fibre-chip">Éthique</span>
+          </div>
         </div>
       </div>
-      <div class="info-card">
-        <div class="info-icon">📦</div>
+      <div class="fibre-card">
+        <div class="fibre-icon">✨</div>
         <div>
-          <h4>Stock toujours disponible</h4>
-          <p>Fini les ruptures au mauvais moment. Les grossistes ont des entrepôts bien garnis et peuvent livrer en 24 à 48h sur la plupart des références courantes.</p>
+          <div class="fibre-name">Mohair & Mohair-Soie</div>
+          <p class="fibre-desc">Kid mohair d'Afrique du Sud, tracé et certifié. Nos mélanges mohair-soie (70/30) offrent une brillance naturelle incomparable. Incontournable pour les créations de mode légères et graphiques.</p>
+          <div class="fibre-chips">
+            <span class="fibre-chip">Kid Mohair</span>
+            <span class="fibre-chip">Brillant</span>
+            <span class="fibre-chip">Aérien</span>
+          </div>
         </div>
       </div>
-      <div class="info-card">
-        <div class="info-icon">🤝</div>
+      <div class="fibre-card">
+        <div class="fibre-icon">👑</div>
         <div>
-          <h4>Accompagnement professionnel</h4>
-          <p>Un grossiste vous conseille sur les grammages, fibres et tendances de saison. Certains proposent même des conditions de paiement différé pour les pros.</p>
+          <div class="fibre-name">Cachemire</div>
+          <p class="fibre-desc">Duvet de chèvre de Mongolie intérieure. Nous proposons du 100% cachemire et des mélanges cachemire-soie ou cachemire-alpaga pour optimiser le rapport douceur/prix sur vos collections haut de gamme.</p>
+          <div class="fibre-chips">
+            <span class="fibre-chip">Mongolie</span>
+            <span class="fibre-chip">Luxe</span>
+            <span class="fibre-chip">Mélange possible</span>
+          </div>
+        </div>
+      </div>
+      <div class="fibre-card">
+        <div class="fibre-icon">🌿</div>
+        <div>
+          <div class="fibre-name">Coton Biologique</div>
+          <p class="fibre-desc">Coton peigné certifié GOTS et Oeko-Tex Standard 100. Idéal pour la layette, les projets crochet et la décoration. Plus de 80 coloris disponibles, réassort permanent.</p>
+          <div class="fibre-chips">
+            <span class="fibre-chip">GOTS</span>
+            <span class="fibre-chip">Oeko-Tex</span>
+            <span class="fibre-chip">Layette</span>
+          </div>
+        </div>
+      </div>
+      <div class="fibre-card">
+        <div class="fibre-icon">♻️</div>
+        <div>
+          <div class="fibre-name">Fibres Recyclées</div>
+          <p class="fibre-desc">Laine régénérée et coton recyclé certifiés GRS (Global Recycled Standard). Pour les marques qui intègrent des engagements RSE dans leur offre, sans compromettre la qualité de la fibre.</p>
+          <div class="fibre-chips">
+            <span class="fibre-chip">GRS Certifié</span>
+            <span class="fibre-chip">RSE</span>
+            <span class="fibre-chip">Tracé</span>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TYPES DE LAINE -->
-<section id="types" class="bg-white">
+<!-- TÉMOIGNAGES -->
+<section class="testi-section section">
   <div class="container">
-    <h2 class="section-title">Les Fibres Disponibles en Gros</h2>
-    <p class="section-subtitle">Chaque matière a ses propriétés — choisissez selon votre usage et votre budget.</p>
+    <span class="tag">Ils nous font confiance</span>
+    <h2 class="section-title">Ce que disent nos clients</h2>
+    <p class="section-desc">Plus de 3 500 professionnels — boutiques, ateliers, créateurs — s'approvisionnent chez nous chaque mois.</p>
 
-    <div class="types-grid">
-      <div class="type-card">
-        <div class="type-icon">🐑</div>
-        <h4>Laine Mérinos</h4>
-        <p>Douce, thermorégulatrice, anti-odeur. La référence pour les vêtements en contact peau. Fine (17-21 microns).</p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">« Fournisseur fiable depuis 3 ans. La laine mérinos est d'une constance irréprochable d'une saison à l'autre, et les tarifs dégressifs nous permettent de maintenir une vraie marge. Le conseiller dédié fait vraiment la différence. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">PD</div>
+          <div>
+            <div class="testi-name">Pierre D.</div>
+            <div class="testi-role">Gérant · Mercerie Lyon</div>
+          </div>
+        </div>
       </div>
-      <div class="type-card">
-        <div class="type-icon">🦙</div>
-        <h4>Alpaga</h4>
-        <p>Plus chaude que la laine de mouton, hypoallergénique, légère. Baby alpaga = qualité supérieure.</p>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">« La gamme alpaga est vraiment exceptionnelle. Mes clientes remarquent immédiatement la différence de qualité. La livraison en 24h est un argument fort pour nous — on ne se retrouve jamais en rupture de stock. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">SL</div>
+          <div>
+            <div class="testi-name">Sophie L.</div>
+            <div class="testi-role">Propriétaire · Boutique tricot Bordeaux</div>
+          </div>
+        </div>
       </div>
-      <div class="type-card">
-        <div class="type-icon">🐐</div>
-        <h4>Cachemire</h4>
-        <p>Fibres rares et précieuses. Incroyablement doux, luxueux. Idéal pour pull et accessoires haut de gamme.</p>
-      </div>
-      <div class="type-card">
-        <div class="type-icon">🌿</div>
-        <h4>Laine Bio</h4>
-        <p>Certifiée GOTS ou Oeko-Tex. Sans pesticides ni colorants nocifs. Parfaite pour les produits bébé.</p>
-      </div>
-      <div class="type-card">
-        <div class="type-icon">♻️</div>
-        <h4>Laine Recyclée</h4>
-        <p>Fabriquée à partir de vêtements usagés. Empreinte carbone réduite, prix compétitif, variété de coloris.</p>
-      </div>
-      <div class="type-card">
-        <div class="type-icon">🧪</div>
-        <h4>Acrylique &amp; Mixtes</h4>
-        <p>Prix bas, facile d'entretien, grande variété de couleurs. Parfait pour les projets décoratifs et le crochet.</p>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="testi-text">« Nous commandons plus de 600 pelotes par mois pour notre atelier. Les conditions de paiement à 90j sont un vrai plus pour notre trésorerie, et les nuanciers mis à jour chaque saison nous facilitent la vie côté clients. »</p>
+        <div class="testi-author">
+          <div class="testi-avatar">MG</div>
+          <div>
+            <div class="testi-name">Marie G.</div>
+            <div class="testi-role">Directrice · Atelier Tricot Paris 11e</div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- COMMENT CHOISIR -->
-<section class="bg-light">
-  <div class="container">
-    <h2 class="section-title">Comment Choisir Son Grossiste Laine ?</h2>
-    <p class="section-subtitle">Les critères essentiels avant de passer votre première commande en gros.</p>
-
-    <div class="info-grid">
-      <div class="info-card">
-        <div class="info-icon">📋</div>
-        <div>
-          <h4>Vérifiez les minimums de commande</h4>
-          <p>Certains grossistes exigent 50€ minimum, d'autres 500€. Vérifiez aussi si le minimum s'applique par référence ou en global.</p>
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">🔍</div>
-        <div>
-          <h4>Demandez des échantillons</h4>
-          <p>Avant d'acheter 10 kg d'une laine, testez le toucher, la régularité du fil et le rendu au lavage. Les bons grossistes proposent des kits d'échantillons.</p>
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">📜</div>
-        <div>
-          <h4>Certifications et traçabilité</h4>
-          <p>Pour la laine naturelle, recherchez les certifications GOTS, Oeko-Tex ou RWS (laine mérinos responsable). Utile si vous revendez à des clients sensibles.</p>
-        </div>
-      </div>
-      <div class="info-card">
-        <div class="info-icon">🚚</div>
-        <div>
-          <h4>Conditions de livraison</h4>
-          <p>Frais de port, délais, politique de retour — surtout important si vous commandez régulièrement. Certains grossistes offrent le port au-delà d'un seuil.</p>
-        </div>
-      </div>
+    <div class="testi-rating">
+      <div class="big">4,9 / 5</div>
+      <div class="sub">Basé sur 1 200+ avis clients vérifiés</div>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section id="faq">
+<section class="faq-section section" id="faq">
   <div class="container">
-    <h2 class="section-title">Questions Fréquentes</h2>
-    <p class="section-subtitle">Tout ce que vous devez savoir avant d'acheter de la laine en gros.</p>
+    <span class="tag">Questions fréquentes</span>
+    <h2 class="section-title">Tout savoir avant de commander</h2>
+    <p class="section-desc">Des questions sur nos tarifs, notre stock ou nos conditions ? On répond à l'essentiel.</p>
 
-    <div class="faq-list">
+    <div class="faq-wrap">
       <details open>
-        <summary>Faut-il un numéro SIRET pour acheter chez un grossiste ?</summary>
-        <p>La plupart des grossistes acceptent aussi les particuliers et associations sans SIRET, surtout si la commande dépasse leur minimum. Certains réservent toutefois les tarifs HT et les conditions de paiement différé aux entreprises immatriculées. Renseignez-vous directement lors de votre premier contact.</p>
+        <summary>Quelle est la quantité minimum pour accéder aux tarifs grossiste ?</summary>
+        <p>Nos tarifs grossiste commencent dès 50 pelotes par commande, toutes références confondues. Ce minimum global vous permet de mixer les fibres et les coloris selon vos besoins. Les remises s'appliquent automatiquement selon le palier atteint : −15% dès 50 pelotes, −30% dès 200, −40% dès 500.</p>
       </details>
       <details>
-        <summary>Quelle quantité minimum pour avoir les tarifs grossiste ?</summary>
-        <p>En général, les tarifs dégressifs commencent à partir de 2 à 5 kg par couleur ou par référence. Certains grossistes appliquent les tarifs pros dès 50€ HT de commande globale. Les meilleures conditions (prix usine, paiement 30j) s'obtiennent à partir de 20-30 kg ou 500€ HT.</p>
+        <summary>Faut-il un numéro SIRET ou être professionnel déclaré ?</summary>
+        <p>Non, nous travaillons avec toute structure professionnelle ou associative, quelle que soit sa forme juridique. Un auto-entrepreneur, une association loi 1901, une école de tricot ou une boutique en ligne peuvent ouvrir un compte grossiste. Nous demandons simplement un justificatif d'activité (Kbis, statuts, extrait SIREN).</p>
       </details>
       <details>
-        <summary>Quelle est la différence entre laine mérinos et laine classique ?</summary>
-        <p>La laine mérinos provient d'une race de mouton spécifique et se distingue par sa finesse (moins de 22 microns). Elle est beaucoup plus douce, non grattante, thermorégulatrice et résistante aux odeurs. La laine "classique" est un terme générique pour toutes les laines de mouton, souvent plus grossières et moins chères.</p>
+        <summary>Proposez-vous des échantillons avant de passer une première commande ?</summary>
+        <p>Oui. Nous envoyons gratuitement un kit d'échantillons comprenant les principales fibres de notre catalogue, accompagné d'un nuancier couleurs physique. Ce kit est disponible sur simple demande via notre formulaire de contact. Comptez 3 à 5 jours ouvrés pour la réception.</p>
       </details>
       <details>
-        <summary>Peut-on se faire livrer à l'étranger (Belgique, Suisse) ?</summary>
-        <p>Oui, la plupart des grossistes français expédient en Europe. Comptez 5-8 jours ouvrés pour la Belgique et la Suisse, avec des frais de port variables. En Suisse, prévoyez les frais de douane si la commande dépasse 300 CHF. Certains grossistes ont des partenariats avec des transporteurs spécialisés qui réduisent ces coûts.</p>
+        <summary>Quels sont les délais de livraison et les transporteurs utilisés ?</summary>
+        <p>Les commandes passées avant 14h sont expédiées le jour même. Le délai standard est de 24 à 48h en France métropolitaine via Chronopost ou DPD. Pour la Belgique, la Suisse et le Luxembourg, comptez 3 à 5 jours ouvrés. La livraison est gratuite dès 300€ HT pour le niveau Starter, et systématiquement gratuite à partir du niveau Professionnel.</p>
       </details>
       <details>
-        <summary>Comment éviter les problèmes de teinte entre plusieurs lots ?</summary>
-        <p>Commandez toujours plus que votre besoin estimé (10-15% de surplus) pour éviter d'avoir à recommander. Notez le numéro de lot (dye lot) indiqué sur les étiquettes et commandez tout votre stock d'un coup. Si vous devez commander en plusieurs fois, précisez le numéro de lot au grossiste pour qu'il essaie de vous fournir la même teinte.</p>
+        <summary>Les prix affichés sont-ils en HT ou TTC ?</summary>
+        <p>Tous nos tarifs sont exprimés en euros hors taxes (HT). La TVA française en vigueur (20%) s'ajoute pour les clients français non assujettis. Les professionnels assujettis à la TVA bénéficient bien sûr de la déductibilité habituelle. Pour les clients UE hors France, la TVA peut être exonérée sur présentation d'un numéro de TVA intracommunautaire valide.</p>
       </details>
       <details>
-        <summary>Quelle laine choisir pour des produits bébé ?</summary>
-        <p>Privilégiez la laine mérinos superwash fine (moins de 18 microns), certifiée Oeko-Tex Standard 100 ou GOTS. L'alpaga baby est aussi une excellente option — naturellement hypoallergénique et ultra-doux. Évitez les acryliques bas de gamme qui peuvent irriter la peau délicate des bébés.</p>
+        <summary>Comment fonctionne le paiement différé ?</summary>
+        <p>Les conditions de paiement différé (30, 60 ou 90 jours) sont accessibles dès le niveau Starter pour les premiers 30 jours, et progressent avec le niveau tarifaire. Elles sont accordées après validation de votre compte et d'un premier historique de commandes satisfaisant. Pour les grandes enseignes, des conditions sur-mesure sont négociables directement avec votre account manager.</p>
       </details>
     </div>
   </div>
 </section>
 
-<!-- CTA BAND -->
-<div class="cta-band">
+<!-- CONTACT -->
+<section class="contact-section section" id="contact">
   <div class="container">
-    <h2>Prêt à Commander en Gros ?</h2>
-    <p>Comparez les offres de nos grossistes partenaires et trouvez les meilleures conditions pour votre projet ou votre boutique.</p>
-    <a href="#comparatif" class="btn">Voir le comparatif →</a>
+    <div class="contact-grid">
+      <div class="contact-left">
+        <h2>Demandez votre devis gratuit</h2>
+        <p>Notre équipe commerciale vous répond sous 24h avec une proposition tarifaire personnalisée selon vos volumes et vos besoins en fibres.</p>
+        <ul class="contact-info">
+          <li><span class="ci-icon">📞</span> 07 56 95 29 29 — Lun–Ven, 9h–18h</li>
+          <li><span class="ci-icon">📧</span> contact@grossiste-laine.fr</li>
+          <li><span class="ci-icon">🚚</span> Expédition depuis notre entrepôt en Île-de-France</li>
+          <li><span class="ci-icon">🕐</span> Réponse garantie sous 24h ouvrées</li>
+        </ul>
+      </div>
+      <div class="contact-form-box">
+        <h3>Formulaire de devis</h3>
+        <form>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Prénom & Nom *</label>
+              <input type="text" placeholder="Marie Martin" required>
+            </div>
+            <div class="form-group">
+              <label>Société</label>
+              <input type="text" placeholder="Atelier du Fil">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" placeholder="contact@votreboutique.fr" required>
+            </div>
+            <div class="form-group">
+              <label>Téléphone</label>
+              <input type="tel" placeholder="06 12 34 56 78">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Type de structure *</label>
+            <select required>
+              <option value="">Sélectionner...</option>
+              <option>Boutique / mercerie</option>
+              <option>Atelier / école de tricot</option>
+              <option>Créateur / marque</option>
+              <option>E-commerce</option>
+              <option>Association</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Votre besoin</label>
+            <textarea placeholder="Fibres souhaitées, volumes estimés, questions spécifiques..."></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Envoyer ma demande →</button>
+          <p class="form-note">Réponse sous 24h · Sans engagement · Devis personnalisé</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<div class="certifs">
+  <div class="container">
+    <div class="certif-list">
+      <div class="certif-item">✓ Oeko-Tex® Standard 100</div>
+      <div class="certif-item">🌿 GOTS Certified</div>
+      <div class="certif-item">♻️ GRS Certified</div>
+      <div class="certif-item">🐑 Mulesing-Free</div>
+      <div class="certif-item">🏆 ISO 9001:2015</div>
+    </div>
   </div>
 </div>
 
 <!-- FOOTER -->
 <footer>
-  <p>© 2026 GrossisteLaine.fr — Site comparatif et informatif. Les liens vers les grossistes peuvent être des liens affiliés.</p>
-  <p style="margin-top:6px"><a href="#">Mentions légales</a> · <a href="#">Contact</a></p>
+  <p>© 2026 Grossiste Laine · contact@grossiste-laine.fr · 07 56 95 29 29</p>
+  <p style="margin-top:6px"><a href="#">Mentions légales</a> · <a href="#">CGV</a> · <a href="#">Contact</a></p>
 </footer>
 
 </body>
