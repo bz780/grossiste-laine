@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grossiste Laine — Achat en Gros de Laine à Tricoter | Pelotes & Fils</title>
+<meta name="description" content="Trouvez les meilleurs grossistes laine en France. Achat en gros de pelotes, fils à tricoter, laine mérinos, alpaga et acrylique. Comparez les prix et commandez dès 50€.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://grossiste-laine.pages.dev/">
+<meta property="og:title" content="Grossiste Laine — Achat en Gros de Pelotes et Fils">
+<meta property="og:description" content="Les meilleurs grossistes laine en France. Mérinos, alpaga, acrylique — livraison rapide, prix pro.">
+<meta property="og:type" content="website">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Grossiste Laine — Achat en Gros",
+  "description": "Comparatif des meilleurs grossistes laine en France pour particuliers et professionnels.",
+  "dateModified": "2026-04-05",
+  "inLanguage": "fr-FR"
+}
+</script>
+
+<style>
+  :root {
+    --primary: #6b4c8a;
+    --primary-dark: #4e3569;
+    --accent: #e8a87c;
+    --bg: #faf8f5;
+    --bg-card: #ffffff;
+    --text: #2d2d2d;
+    --text-muted: #6b6b6b;
+    --border: #e8e0d5;
+    --success: #3a7d44;
+    --radius: 10px;
+    --shadow: 0 2px 16px rgba(0,0,0,.08);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  a { color: var(--primary); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* HEADER */
+  header {
+    background: var(--primary);
+    color: #fff;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  }
+  .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: -.5px; }
+  .logo span { color: var(--accent); }
+  nav a {
+    color: rgba(255,255,255,.85);
+    margin-left: 20px;
+    font-size: .9rem;
+  }
+  nav a:hover { color: #fff; text-decoration: none; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(135deg, var(--primary) 0%, #8e6aac 100%);
+    color: #fff;
+    padding: 70px 20px 60px;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(1.7rem, 4vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero p {
+    font-size: 1.1rem;
+    opacity: .9;
+    max-width: 600px;
+    margin: 0 auto 28px;
+  }
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .badge {
+    background: rgba(255,255,255,.15);
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .85rem;
+  }
+  .btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: var(--radius);
+    font-weight: 700;
+    font-size: 1rem;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 4px 14px rgba(0,0,0,.2);
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.25); text-decoration: none; }
+  .btn-outline {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    margin-left: 12px;
+  }
+
+  /* CONTAINER */
+  .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 60px 0; }
+
+  /* SECTION TITLES */
+  .section-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--primary-dark);
+  }
+  .section-subtitle {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  /* CARDS */
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: transform .15s, box-shadow .15s;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,.12); }
+  .card-rank {
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; color: var(--primary-dark); }
+  .card .rating { color: #f5a623; font-size: 1.1rem; margin-bottom: 10px; }
+  .card .price-tag {
+    background: #f0faf2;
+    color: var(--success);
+    border: 1px solid #c3e6cb;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: .85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .card p { color: var(--text-muted); font-size: .9rem; line-height: 1.6; margin-bottom: 18px; }
+  .card ul { list-style: none; margin-bottom: 20px; }
+  .card ul li { font-size: .88rem; color: var(--text-muted); padding: 3px 0; padding-left: 18px; position: relative; }
+  .card ul li::before { content: '✓'; position: absolute; left: 0; color: var(--success); font-weight: 700; }
+  .card .btn-card {
+    display: block;
+    text-align: center;
+    background: var(--primary);
+    color: #fff;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: .9rem;
+    transition: background .15s;
+  }
+  .card .btn-card:hover { background: var(--primary-dark); text-decoration: none; }
+  .card.top-pick { border: 2px solid var(--primary); position: relative; }
+  .top-badge {
+    position: absolute;
+    top: -12px;
+    left: 20px;
+    background: var(--primary);
+    color: #fff;
+    padding: 3px 12px;
+    border-radius: 12px;
+    font-size: .75rem;
+    font-weight: 700;
+  }
+
+  /* INFO GRID */
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .info-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .info-icon { font-size: 1.8rem; flex-shrink: 0; }
+  .info-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--primary-dark); }
+  .info-card p { font-size: .88rem; color: var(--text-muted); line-height: 1.5; }
+
+  /* TYPES DE LAINE */
+  .types-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .type-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+  }
+  .type-card .type-icon { font-size: 2rem; margin-bottom: 8px; }
+  .type-card h4 { font-size: 1rem; font-weight: 700; color: var(--primary-dark); margin-bottom: 6px; }
+  .type-card p { font-size: .83rem; color: var(--text-muted); }
+
+  /* BG VARIANTS */
+  .bg-light { background: #f2edf7; }
+  .bg-white { background: #fff; }
+
+  /* FAQ */
+  .faq-list { max-width: 720px; }
+  details {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 12px;
+    overflow: hidden;
+  }
+  summary {
+    padding: 18px 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: .95rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  summary::after { content: '+'; font-size: 1.2rem; color: var(--primary); }
+  details[open] summary::after { content: '−'; }
+  details p { padding: 0 20px 18px; color: var(--text-muted); font-size: .9rem; line-height: 1.7; }
+
+  /* CTA BAND */
+  .cta-band {
+    background: linear-gradient(135deg, var(--primary) 0%, #8e6aac 100%);
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .cta-band h2 { font-size: 1.8rem; margin-bottom: 12px; }
+  .cta-band p { opacity: .9; margin-bottom: 28px; font-size: 1rem; max-width: 520px; margin-left: auto; margin-right: auto; margin-bottom: 28px; }
+
+  /* DATE */
+  .last-updated { text-align: center; color: var(--text-muted); font-size: .8rem; margin-top: 8px; }
+  time.updated { font-style: italic; }
+
+  /* FOOTER */
+  footer {
+    background: #1a1a2e;
+    color: rgba(255,255,255,.6);
+    text-align: center;
+    padding: 30px 20px;
+    font-size: .82rem;
+  }
+  footer a { color: rgba(255,255,255,.7); }
+
+  @media (max-width: 600px) {
+    .hero { padding: 50px 16px 40px; }
+    .btn-outline { display: block; margin: 12px auto 0; }
+    nav { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="logo">Grossiste<span>Laine</span>.fr</div>
+  <nav>
+    <a href="#comparatif">Comparatif</a>
+    <a href="#types">Types de laine</a>
+    <a href="#conseils">Conseils</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Achat en Gros de Laine &amp; Fils à Tricoter</h1>
+  <p>Comparez les meilleurs grossistes laine en France. Mérinos, alpaga, acrylique — prix pro, livraison rapide dès 50€ de commande.</p>
+  <div class="hero-badges">
+    <span class="badge">🧶 +200 références</span>
+    <span class="badge">🚚 Livraison 24-48h</span>
+    <span class="badge">💼 Tarifs professionnels</span>
+    <span class="badge">⭐ Sélection 2026</span>
+  </div>
+  <a href="#comparatif" class="btn">Voir le comparatif</a>
+  <a href="#types" class="btn btn-outline">Types de laine</a>
+  <p class="last-updated"><time datetime="2026-04-05" class="updated">5 avril 2026</time></p>
+</div>
+
+<!-- COMPARATIF -->
+<section id="comparatif">
+  <div class="container">
+    <h2 class="section-title">Les Meilleurs Grossistes Laine en 2026</h2>
+    <p class="section-subtitle">Sélection mise à jour régulièrement — rapports qualité/prix, gamme et conditions de gros.</p>
+
+    <div class="cards">
+
+      <div class="card top-pick">
+        <span class="top-badge">⭐ Meilleur choix</span>
+        <div class="card-rank">N°1 — Grossiste</div>
+        <h3>LaMercerie Pro</h3>
+        <div class="rating">★★★★★</div>
+        <span class="price-tag">Dès 50€ HT</span>
+        <p>Le référent du négoce de laine en France. Plus de 500 coloris disponibles, réassort hebdomadaire et tarifs dégressifs à partir de 5 kg.</p>
+        <ul>
+          <li>Mérinos, alpaga, cachemire</li>
+          <li>Tarifs dégressifs par kg</li>
+          <li>Livraison 24h en France</li>
+          <li>Échantillons gratuits</li>
+          <li>Paiement 30j pour pros</li>
+        </ul>
+        <a href="#" class="btn-card" rel="nofollow sponsored">Voir les tarifs →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">N°2 — Grossiste</div>
+        <h3>FilsPro France</h3>
+        <div class="rating">★★★★☆</div>
+        <span class="price-tag">Dès 75€ HT</span>
+        <p>Spécialiste des fils techniques et laines naturelles pour artisans et boutiques. Large choix de conditionnements (100g à 500g).</p>
+        <ul>
+          <li>Laine bio certifiée GOTS</li>
+          <li>Fils recyclés disponibles</li>
+          <li>Click &amp; Collect possible</li>
+          <li>Conseil personnalisé</li>
+        </ul>
+        <a href="#" class="btn-card" rel="nofollow sponsored">Découvrir l'offre →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-rank">N°3 — Import direct</div>
+        <h3>EuroWool Direct</h3>
+        <div class="rating">★★★★☆</div>
+        <span class="price-tag">Dès 100€ HT</span>
+        <p>Importateur direct depuis l'Espagne et le Portugal. Idéal pour les gros volumes — prix imbattables à partir de 20 kg, délai 3-5 jours.</p>
+        <ul>
+          <li>Prix usine à partir de 20 kg</li>
+          <li>Laine mérinos fine 17-19 microns</li>
+          <li>Personnalisation couleur possible</li>
+          <li>Paiement échelonné</li>
+        </ul>
+        <a href="#" class="btn-card" rel="nofollow sponsored">Demander un devis →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- POURQUOI ACHETER EN GROS -->
+<section id="conseils" class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Pourquoi Acheter la Laine en Gros ?</h2>
+    <p class="section-subtitle">Les avantages concrets de passer par un grossiste plutôt que la vente au détail.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">💰</div>
+        <div>
+          <h4>Économies substantielles</h4>
+          <p>En achetant au kilo ou par lot, vous pouvez économiser jusqu'à 40% par rapport au prix de détail. Idéal pour les associations, ateliers et boutiques.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🎨</div>
+        <div>
+          <h4>Homogénéité des lots</h4>
+          <p>Commandez suffisamment pour finir votre projet sans rupture de teinte. Les grossistes garantissent la même dye lot sur les grandes quantités.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📦</div>
+        <div>
+          <h4>Stock toujours disponible</h4>
+          <p>Fini les ruptures au mauvais moment. Les grossistes ont des entrepôts bien garnis et peuvent livrer en 24 à 48h sur la plupart des références courantes.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🤝</div>
+        <div>
+          <h4>Accompagnement professionnel</h4>
+          <p>Un grossiste vous conseille sur les grammages, fibres et tendances de saison. Certains proposent même des conditions de paiement différé pour les pros.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPES DE LAINE -->
+<section id="types" class="bg-white">
+  <div class="container">
+    <h2 class="section-title">Les Fibres Disponibles en Gros</h2>
+    <p class="section-subtitle">Chaque matière a ses propriétés — choisissez selon votre usage et votre budget.</p>
+
+    <div class="types-grid">
+      <div class="type-card">
+        <div class="type-icon">🐑</div>
+        <h4>Laine Mérinos</h4>
+        <p>Douce, thermorégulatrice, anti-odeur. La référence pour les vêtements en contact peau. Fine (17-21 microns).</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">🦙</div>
+        <h4>Alpaga</h4>
+        <p>Plus chaude que la laine de mouton, hypoallergénique, légère. Baby alpaga = qualité supérieure.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">🐐</div>
+        <h4>Cachemire</h4>
+        <p>Fibres rares et précieuses. Incroyablement doux, luxueux. Idéal pour pull et accessoires haut de gamme.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">🌿</div>
+        <h4>Laine Bio</h4>
+        <p>Certifiée GOTS ou Oeko-Tex. Sans pesticides ni colorants nocifs. Parfaite pour les produits bébé.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">♻️</div>
+        <h4>Laine Recyclée</h4>
+        <p>Fabriquée à partir de vêtements usagés. Empreinte carbone réduite, prix compétitif, variété de coloris.</p>
+      </div>
+      <div class="type-card">
+        <div class="type-icon">🧪</div>
+        <h4>Acrylique &amp; Mixtes</h4>
+        <p>Prix bas, facile d'entretien, grande variété de couleurs. Parfait pour les projets décoratifs et le crochet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMMENT CHOISIR -->
+<section class="bg-light">
+  <div class="container">
+    <h2 class="section-title">Comment Choisir Son Grossiste Laine ?</h2>
+    <p class="section-subtitle">Les critères essentiels avant de passer votre première commande en gros.</p>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">📋</div>
+        <div>
+          <h4>Vérifiez les minimums de commande</h4>
+          <p>Certains grossistes exigent 50€ minimum, d'autres 500€. Vérifiez aussi si le minimum s'applique par référence ou en global.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🔍</div>
+        <div>
+          <h4>Demandez des échantillons</h4>
+          <p>Avant d'acheter 10 kg d'une laine, testez le toucher, la régularité du fil et le rendu au lavage. Les bons grossistes proposent des kits d'échantillons.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📜</div>
+        <div>
+          <h4>Certifications et traçabilité</h4>
+          <p>Pour la laine naturelle, recherchez les certifications GOTS, Oeko-Tex ou RWS (laine mérinos responsable). Utile si vous revendez à des clients sensibles.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🚚</div>
+        <div>
+          <h4>Conditions de livraison</h4>
+          <p>Frais de port, délais, politique de retour — surtout important si vous commandez régulièrement. Certains grossistes offrent le port au-delà d'un seuil.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <h2 class="section-title">Questions Fréquentes</h2>
+    <p class="section-subtitle">Tout ce que vous devez savoir avant d'acheter de la laine en gros.</p>
+
+    <div class="faq-list">
+      <details open>
+        <summary>Faut-il un numéro SIRET pour acheter chez un grossiste ?</summary>
+        <p>La plupart des grossistes acceptent aussi les particuliers et associations sans SIRET, surtout si la commande dépasse leur minimum. Certains réservent toutefois les tarifs HT et les conditions de paiement différé aux entreprises immatriculées. Renseignez-vous directement lors de votre premier contact.</p>
+      </details>
+      <details>
+        <summary>Quelle quantité minimum pour avoir les tarifs grossiste ?</summary>
+        <p>En général, les tarifs dégressifs commencent à partir de 2 à 5 kg par couleur ou par référence. Certains grossistes appliquent les tarifs pros dès 50€ HT de commande globale. Les meilleures conditions (prix usine, paiement 30j) s'obtiennent à partir de 20-30 kg ou 500€ HT.</p>
+      </details>
+      <details>
+        <summary>Quelle est la différence entre laine mérinos et laine classique ?</summary>
+        <p>La laine mérinos provient d'une race de mouton spécifique et se distingue par sa finesse (moins de 22 microns). Elle est beaucoup plus douce, non grattante, thermorégulatrice et résistante aux odeurs. La laine "classique" est un terme générique pour toutes les laines de mouton, souvent plus grossières et moins chères.</p>
+      </details>
+      <details>
+        <summary>Peut-on se faire livrer à l'étranger (Belgique, Suisse) ?</summary>
+        <p>Oui, la plupart des grossistes français expédient en Europe. Comptez 5-8 jours ouvrés pour la Belgique et la Suisse, avec des frais de port variables. En Suisse, prévoyez les frais de douane si la commande dépasse 300 CHF. Certains grossistes ont des partenariats avec des transporteurs spécialisés qui réduisent ces coûts.</p>
+      </details>
+      <details>
+        <summary>Comment éviter les problèmes de teinte entre plusieurs lots ?</summary>
+        <p>Commandez toujours plus que votre besoin estimé (10-15% de surplus) pour éviter d'avoir à recommander. Notez le numéro de lot (dye lot) indiqué sur les étiquettes et commandez tout votre stock d'un coup. Si vous devez commander en plusieurs fois, précisez le numéro de lot au grossiste pour qu'il essaie de vous fournir la même teinte.</p>
+      </details>
+      <details>
+        <summary>Quelle laine choisir pour des produits bébé ?</summary>
+        <p>Privilégiez la laine mérinos superwash fine (moins de 18 microns), certifiée Oeko-Tex Standard 100 ou GOTS. L'alpaga baby est aussi une excellente option — naturellement hypoallergénique et ultra-doux. Évitez les acryliques bas de gamme qui peuvent irriter la peau délicate des bébés.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<div class="cta-band">
+  <div class="container">
+    <h2>Prêt à Commander en Gros ?</h2>
+    <p>Comparez les offres de nos grossistes partenaires et trouvez les meilleures conditions pour votre projet ou votre boutique.</p>
+    <a href="#comparatif" class="btn">Voir le comparatif →</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 GrossisteLaine.fr — Site comparatif et informatif. Les liens vers les grossistes peuvent être des liens affiliés.</p>
+  <p style="margin-top:6px"><a href="#">Mentions légales</a> · <a href="#">Contact</a></p>
+</footer>
+
+</body>
+</html>
