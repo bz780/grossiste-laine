@@ -283,7 +283,8 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 
 /* POURQUOI NOUS */
 .pourquoi-section { background: var(--white); }
-.pourquoi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 48px; }
+.pourquoi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 48px; }
+@media (max-width: 768px) { .pourquoi-grid { grid-template-columns: repeat(2, 1fr); } }
 .pourquoi-card { border: 1.5px solid var(--border); border-radius: var(--radius); padding: 24px; text-align: center; transition: border-color .15s, box-shadow .15s; }
 .pourquoi-card:hover { border-color: var(--purple); box-shadow: 0 0 0 3px var(--purple-light); }
 .pourquoi-icon { font-size: 2.2rem; margin-bottom: 12px; }
@@ -313,7 +314,7 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 
 /* FAQ */
 .faq-section { background: var(--bg); }
-.faq-wrap { max-width: 740px; }
+.faq-wrap { max-width: 740px; margin: 0 auto; }
 details { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 10px; }
 summary { padding: 18px 22px; cursor: pointer; font-weight: 600; font-size: .95rem; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--ink); }
 summary::-webkit-details-marker { display: none; }
@@ -444,9 +445,9 @@ footer a { color: rgba(255,255,255,.55); }
 <!-- PHOTO STRIP -->
 <div class="photo-strip">
   <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=600&q=80" alt="Laine mérinos en gros — pelotes colorées">
-  <img src="https://images.unsplash.com/photo-1574781260629-b89b246a6a1e?auto=format&fit=crop&w=600&q=80" alt="Fil à tricoter professionnel — fournisseur laine">
-  <img src="https://images.unsplash.com/photo-1576461167451-d9a79de8b84d?auto=format&fit=crop&w=600&q=80" alt="Laine alpaga en gros — qualité premium">
-  <img src="https://images.unsplash.com/photo-1596462046-ea4e1d8d8234?auto=format&fit=crop&w=600&q=80" alt="Grossiste laine tricot — stock permanent">
+  <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Fil à tricoter professionnel — fournisseur laine">
+  <img src="https://images.unsplash.com/photo-1585386959984-a4155224a1ad?auto=format&fit=crop&w=600&q=80" alt="Laine alpaga en gros — qualité premium">
+  <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&q=80" alt="Grossiste laine tricot — stock permanent">
 </div>
 
 <!-- INTRO SEO -->
