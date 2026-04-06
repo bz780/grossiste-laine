@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://grossiste-laine.pages.dev/sitemap.xml
+Sitemap: https://grossiste-laine.fr/sitemap.xml
