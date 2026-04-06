@@ -22,10 +22,16 @@
   "name": "Grossiste Laine",
   "url": "https://grossiste-laine.fr",
   "logo": "https://grossiste-laine.fr/favicon.svg",
+  "image": "https://grossiste-laine.fr/images/hero.jpg",
   "description": "Grossiste laine professionnel en France. Mérinos, alpaga, mohair, cachemire, coton bio — 5 000 références. Prix dégressifs dès 50 pelotes, livraison 24-48h, personnalisation coloris.",
   "telephone": "+33756952929",
   "email": "adv@grossiste-laine.fr",
   "priceRange": "€€",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "FR",
+    "addressRegion": "Île-de-France"
+  },
   "areaServed": [
     {"@type": "Country", "name": "France"},
     {"@type": "Country", "name": "Belgique"},
@@ -39,11 +45,11 @@
     "@type": "OfferCatalog",
     "name": "Catalogue laine en gros professionnel",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Laine Mérinos Extra-Fine en gros", "description": "100% mérinos superwash, 60 coloris, prix grossiste à partir de 2,90€ HT/pelote"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Baby Alpaga en gros", "description": "100% baby alpaga import Pérou, hypoallergénique, 25 coloris"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Mohair-Soie professionnel", "description": "70% kid mohair 30% soie, 35 coloris, fournisseur France"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cachemire grossiste", "description": "100% cachemire Mongolie, 18 coloris, achat en gros"}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Coton biologique GOTS en gros", "description": "Certifié GOTS et Oeko-Tex, 80 coloris permanents"}}
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Laine Mérinos Extra-Fine en gros", "description": "100% mérinos superwash, 60 coloris, prix grossiste à partir de 2,90€ HT/pelote", "offers": {"@type": "Offer", "price": "2.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Baby Alpaga en gros", "description": "100% baby alpaga import Pérou, hypoallergénique, 25 coloris", "offers": {"@type": "Offer", "price": "4.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Mohair-Soie professionnel", "description": "70% kid mohair 30% soie, 35 coloris, fournisseur France", "offers": {"@type": "Offer", "price": "5.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cachemire grossiste", "description": "100% cachemire Mongolie, 18 coloris, achat en gros", "offers": {"@type": "Offer", "price": "8.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Coton biologique GOTS en gros", "description": "Certifié GOTS et Oeko-Tex, 80 coloris permanents", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}}
     ]
   },
   "aggregateRating": {
@@ -212,7 +218,7 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 .product-card[style*="display: none"] { display: none !important; }
 .product-thumb { height: 150px; display: flex; align-items: center; justify-content: center; font-size: 3.2rem; position: relative; }
 .product-badge { position: absolute; top: 12px; left: 12px; background: var(--purple); color: var(--white); font-size: .7rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 3px 10px; border-radius: 4px; }
-.product-badge.gold { background: var(--gold); }
+.product-badge.gold { background: var(--gold); color: #3d2600; }
 .product-badge.green { background: var(--green); }
 .product-body { padding: 16px 18px 18px; }
 .product-meta { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 7px; }
@@ -233,10 +239,10 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 .pricing-card { border: 1.5px solid var(--border); border-radius: var(--radius); padding: 28px; position: relative; background: var(--white); transition: transform .2s, box-shadow .2s; }
 .pricing-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
 .pricing-card.featured { border-color: var(--purple); background: var(--purple); color: var(--white); }
-.popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: var(--white); font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; white-space: nowrap; }
+.popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #3d2600; font-size: .72rem; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; padding: 4px 14px; border-radius: 20px; white-space: nowrap; }
 .pricing-tier { font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 6px; }
 .pricing-card:not(.featured) .pricing-tier { color: var(--ink-light); }
-.pricing-card.featured .pricing-tier { color: rgba(255,255,255,.7); }
+.pricing-card.featured .pricing-tier { color: #fff; }
 .pricing-name { font-size: 1.15rem; font-weight: 800; margin-bottom: 4px; }
 .pricing-moq { font-size: .85rem; margin-bottom: 20px; }
 .pricing-card:not(.featured) .pricing-moq { color: var(--ink-light); }
@@ -401,7 +407,7 @@ footer a { color: rgba(255,255,255,.55); }
     </div>
   </div>
 </header>
-
+<main>
 <!-- HERO -->
 <section class="hero">
   <div class="container">
@@ -976,8 +982,8 @@ footer a { color: rgba(255,255,255,.55); }
             </div>
           </div>
           <div class="form-group">
-            <label>Type de structure *</label>
-            <select required>
+            <label for="structure-type">Type de structure *</label>
+            <select id="structure-type" required>
               <option value="">Sélectionner...</option>
               <option>Boutique / mercerie</option>
               <option>Atelier / école de tricot</option>
@@ -1012,6 +1018,7 @@ footer a { color: rgba(255,255,255,.55); }
   </div>
 </div>
 
+</main>
 <!-- FOOTER -->
 <footer>
   <p>© 2026 Grossiste Laine · adv@grossiste-laine.fr · 07 56 95 29 29</p>
