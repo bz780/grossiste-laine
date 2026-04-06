@@ -153,7 +153,12 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 /* HERO */
 .hero { background: linear-gradient(135deg, var(--ink) 0%, #2d1f4e 100%); color: var(--white); padding: 80px 0 72px; position: relative; overflow: hidden; }
 .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(107,76,138,.4) 0%, transparent 60%); }
-.hero-content { position: relative; max-width: 680px; }
+.hero-inner { position: relative; display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center; }
+.hero-content { position: relative; }
+.hero-photo { position: relative; border-radius: var(--radius); overflow: hidden; height: 380px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .9; }
+.hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(107,76,138,.2) 0%, transparent 60%); }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-photo { display: none; } }
 .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 20px; padding: 5px 14px; font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: rgba(255,255,255,.9); margin-bottom: 24px; }
 .hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -.5px; }
 .hero h1 em { font-style: normal; color: #c5a8e0; }
@@ -173,6 +178,12 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 .trust-item { display: flex; align-items: center; gap: 8px; padding: 0 28px; font-size: .85rem; font-weight: 500; border-right: 1px solid rgba(255,255,255,.15); }
 .trust-item:last-child { border-right: none; }
 .trust-item .icon { font-size: 1rem; }
+
+/* PHOTO STRIP */
+.photo-strip { display: grid; grid-template-columns: repeat(4, 1fr); height: 200px; gap: 3px; overflow: hidden; }
+.photo-strip img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .4s; }
+.photo-strip img:hover { transform: scale(1.04); }
+@media (max-width: 600px) { .photo-strip { grid-template-columns: repeat(2, 1fr); height: 260px; } }
 
 /* INTRO SEO */
 .intro-section { background: var(--white); padding: 40px 0; border-bottom: 1px solid var(--border); }
@@ -369,6 +380,7 @@ footer a { color: rgba(255,255,255,.55); }
 <!-- HERO -->
 <section class="hero">
   <div class="container">
+    <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-eyebrow">🧶 Fournisseur laine en gros depuis 2009</div>
       <h1>Votre grossiste <em>laine</em> professionnel en France</h1>
@@ -384,6 +396,11 @@ footer a { color: rgba(255,255,255,.55); }
         <div class="hero-stat"><div class="num">24h</div><div class="label">délai d'expédition</div></div>
       </div>
     </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=840&q=80" alt="Pelotes de laine colorées — grossiste laine professionnel" loading="eager">
+    </div>
+    </div>
   </div>
 </section>
 
@@ -398,6 +415,14 @@ footer a { color: rgba(255,255,255,.55); }
       <div class="trust-item"><span class="icon">🔒</span> Paiement différé jusqu'à 90j</div>
     </div>
   </div>
+</div>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=600&q=80" alt="Laine mérinos en gros — pelotes colorées">
+  <img src="https://images.unsplash.com/photo-1574781260629-b89b246a6a1e?auto=format&fit=crop&w=600&q=80" alt="Fil à tricoter professionnel — fournisseur laine">
+  <img src="https://images.unsplash.com/photo-1576461167451-d9a79de8b84d?auto=format&fit=crop&w=600&q=80" alt="Laine alpaga en gros — qualité premium">
+  <img src="https://images.unsplash.com/photo-1596462046-ea4e1d8d8234?auto=format&fit=crop&w=600&q=80" alt="Grossiste laine tricot — stock permanent">
 </div>
 
 <!-- INTRO SEO -->
