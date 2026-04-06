@@ -194,7 +194,7 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 
 /* INTRO SEO */
 .intro-section { background: var(--white); padding: 40px 0; border-bottom: 1px solid var(--border); }
-.intro-text { max-width: 820px; font-size: .95rem; color: var(--ink-light); line-height: 1.8; }
+.intro-text { max-width: 820px; margin: 0 auto; font-size: .95rem; color: var(--ink-light); line-height: 1.8; }
 .intro-text strong { color: var(--ink); }
 
 /* ORIGINES */
@@ -202,7 +202,8 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 .origines-label { text-align: center; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 28px; }
 .origines-grid { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
 .origine-pill { display: flex; align-items: center; gap: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 40px; padding: 10px 20px; font-size: .88rem; font-weight: 600; color: var(--ink); }
-.origine-pill .flag { font-size: 1.1rem; }
+.origine-pill .iso { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 18px; background: var(--purple); color: #fff; font-size: .62rem; font-weight: 800; border-radius: 3px; letter-spacing: .04em; flex-shrink: 0; }
+.origine-pill .iso.bio { background: var(--green); }
 
 /* FILTERS */
 .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
@@ -305,7 +306,7 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 @media (max-width: 600px) { .pourquoi-bottom { grid-template-columns: 1fr; } }
 
 /* TESTI */
-.testi-section { background: var(--bg); }
+.testi-section { background: var(--bg); padding-bottom: 48px; }
 .testi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
 .testi-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 24px; }
 .stars { color: #f5a623; font-size: 1rem; margin-bottom: 12px; letter-spacing: 2px; }
@@ -319,7 +320,7 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 .testi-rating .sub { font-size: .85rem; color: var(--ink-light); }
 
 /* FAQ */
-.faq-section { background: var(--bg); }
+.faq-section { background: var(--white); padding-top: 48px; }
 .faq-wrap { max-width: 740px; margin: 0 auto; }
 details { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-sm); margin-bottom: 10px; }
 summary { padding: 18px 22px; cursor: pointer; font-weight: 600; font-size: .95rem; list-style: none; display: flex; justify-content: space-between; align-items: center; color: var(--ink); }
@@ -470,12 +471,12 @@ footer a { color: rgba(255,255,255,.55); }
   <div class="container">
     <p class="origines-label">Fibres sélectionnées à la source</p>
     <div class="origines-grid">
-      <div class="origine-pill"><span class="flag">🇦🇺</span> Mérinos Australie</div>
-      <div class="origine-pill"><span class="flag">🇵🇪</span> Alpaga Pérou &amp; Bolivie</div>
-      <div class="origine-pill"><span class="flag">🇿🇦</span> Kid Mohair Afrique du Sud</div>
-      <div class="origine-pill"><span class="flag">🇲🇳</span> Cachemire Mongolie</div>
-      <div class="origine-pill"><span class="flag">🇫🇷</span> Mohair-soie France</div>
-      <div class="origine-pill"><span class="flag">🌍</span> Coton bio certifié GOTS</div>
+      <div class="origine-pill"><span class="iso">AU</span> Mérinos Australie</div>
+      <div class="origine-pill"><span class="iso">PE</span> Alpaga Pérou &amp; Bolivie</div>
+      <div class="origine-pill"><span class="iso">ZA</span> Kid Mohair Afrique du Sud</div>
+      <div class="origine-pill"><span class="iso">MN</span> Cachemire Mongolie</div>
+      <div class="origine-pill"><span class="iso">FR</span> Mohair-soie France</div>
+      <div class="origine-pill"><span class="iso bio">BIO</span> Coton bio certifié GOTS</div>
     </div>
   </div>
 </section>
