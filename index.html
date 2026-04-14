@@ -44,7 +44,7 @@
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Catalogue laine en gros professionnel",
-    "itemListElement": [},},
+    "itemListElement": [
       {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Coton biologique GOTS en gros", "description": "Certifié GOTS et Oeko-Tex, 80 coloris permanents", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}}
     ]
   },
@@ -378,7 +378,7 @@ footer a { color: rgba(255,255,255,.55); }
   .trust-list { gap: 8px; }
 }
 </style>
-<link rel="preload" as="image" href="https://images.unsplash.com/photo-1596553421657-97e66c6c4a78?w=800&q=85" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 <!--email_off-->
 </head>
 <body>
@@ -438,7 +438,7 @@ footer a { color: rgba(255,255,255,.55); }
       </div>
       <div class="hero-visual">
         <div class="hero-img-main">
-          <img src="https://images.unsplash.com/photo-1596553421657-97e66c6c4a78?w=800&q=85" alt="Pelotes de laine colorées en stock grossiste — mérinos, alpaga, mohair" loading="eager" width="400" height="420">
+          <img src="images/hero.jpg" alt="Pelotes de laine colorées en stock grossiste — mérinos, alpaga, mohair" loading="eager" width="400" height="420">
           <div class="hero-photo-badge">
             <div>
               <div class="badge-stars">★★★★★</div>
@@ -476,10 +476,10 @@ footer a { color: rgba(255,255,255,.55); }
 
 <!-- PHOTO STRIP -->
 <div class="photo-strip">
-  <img src="https://images.unsplash.com/photo-1583394293214-b3f3d7d0ee84?w=600&q=80" alt="Laine mérinos en gros — pelotes colorées fournisseur professionnel" loading="lazy">
-  <img src="https://images.unsplash.com/photo-1606791422814-b32c705e3e2f?w=600&q=80" alt="Fil à tricoter professionnel — stock grossiste laine" loading="lazy">
-  <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80" alt="Laine alpaga et mohair en gros — qualité premium" loading="lazy">
-  <img src="https://images.unsplash.com/photo-1614036634896-1e7dbc87e17b?w=600&q=80" alt="Grossiste laine tricot — livraison 24h France" loading="lazy">
+  <img src="images/strip1.jpg" alt="Laine mérinos en gros — pelotes colorées fournisseur professionnel" loading="lazy">
+  <img src="images/strip2.jpg" alt="Fil à tricoter professionnel — stock grossiste laine" loading="lazy">
+  <img src="images/strip3.jpg" alt="Laine alpaga et mohair en gros — qualité premium" loading="lazy">
+  <img src="images/strip4.jpg" alt="Grossiste laine tricot — livraison 24h France" loading="lazy">
 </div>
 
 <!-- INTRO SEO -->
@@ -557,6 +557,79 @@ footer a { color: rgba(255,255,255,.55); }
           <a href="#contact" class="btn-product">Demander un devis</a>
         </div>
       </div>
+
+      <div class="product-card" data-cat="mohair">
+        <div class="product-thumb"><img src="images/mohair-soie-professionnel.webp" alt="Mohair-Soie Professionnel en gros — fil duveteux sur fond neutre" loading="lazy" width="600" height="400"><span class="product-badge">Premium</span></div>
+        <div class="product-body">
+          <div class="product-meta"><span class="meta-chip">72% Mohair</span><span class="meta-chip">25g</span><span class="meta-chip">35 coloris</span></div>
+          <div class="product-name">Mohair-Soie Professionnel</div>
+          <p class="product-desc">Association mohair kid et soie naturelle. Légèreté et brillance exceptionnelles. Référence créateurs et couturiers.</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="mohair">
+        <div class="product-thumb"><img src="images/mohair-chunky-gros-volume.webp" alt="Mohair Chunky Gros Volume — écheveau épais sur surface bois" loading="lazy" width="600" height="400"></div>
+        <div class="product-body">
+          <div class="product-meta"><span class="meta-chip">80% Mohair</span><span class="meta-chip">100g</span><span class="meta-chip">25 coloris</span></div>
+          <div class="product-name">Mohair Chunky Gros Volume</div>
+          <p class="product-desc">Mohair épais pour tricot rapide. Douceur maximale, volume exceptionnel. Idéal écharpes, plaids et pulls oversize.</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="coton">
+        <div class="product-thumb"><img src="images/coton-biologique-gots.webp" alt="Coton biologique GOTS en gros — pelote coton sur tissu naturel" loading="lazy" width="600" height="400"><span class="product-badge">Éco</span></div>
+        <div class="product-body">
+          <div class="product-meta"><span class="meta-chip">100% Coton Bio</span><span class="meta-chip">50g</span><span class="meta-chip">80 coloris</span></div>
+          <div class="product-name">Coton biologique GOTS</div>
+          <p class="product-desc">Certifié GOTS et Oeko-Tex. 80 coloris permanents, sans résidus chimiques. Idéal layette et textile sensible.</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="coton">
+        <div class="product-thumb"><img src="images/coton-mercerse-brillant.webp" alt="Coton mercerisé brillant en gros — fil lustré sur surface claire" loading="lazy" width="600" height="400"></div>
+        <div class="product-body">
+          <div class="product-meta"><span class="meta-chip">100% Coton</span><span class="meta-chip">50g</span><span class="meta-chip">60 coloris</span></div>
+          <div class="product-name">Coton mercerisé brillant</div>
+          <p class="product-desc">Traitement mercerisé pour éclat et résistance accrus. Toucher soyeux, tenue aux lavages. Bestseller amigurumi et crochet.</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="recycle">
+        <div class="product-thumb"><img src="images/laine-recyclee-grs.webp" alt="Laine recyclée GRS en gros — pelote recyclée sur fond minéral" loading="lazy" width="600" height="400"><span class="product-badge">Éco</span></div>
+        <div class="product-body">
+          <div class="product-meta"><span class="meta-chip">100% Recyclé</span><span class="meta-chip">100g</span><span class="meta-chip">30 coloris</span></div>
+          <div class="product-name">Laine recyclée GRS</div>
+          <p class="product-desc">Certifiée Global Recycled Standard. Fibres 100% post-consommation. Impact carbone réduit de 60% vs laine vierge.</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
+      <div class="product-card" data-cat="luxe">
+        <div class="product-thumb"><img src="images/cachemire-alpaga-mix-luxe.webp" alt="Cachemire-Alpaga Mix Luxe en gros — fil luxe sur velours sombre" loading="lazy" width="600" height="400"><span class="product-badge">Luxe</span></div>
+        <div class="product-body">
+          <div class="product-meta"><span class="meta-chip">Cachemire/Alpaga</span><span class="meta-chip">50g</span><span class="meta-chip">20 coloris</span></div>
+          <div class="product-name">Cachemire-Alpaga Mix Luxe</div>
+          <p class="product-desc">Alliance cachemire grade A et alpaga baby. Douceur incomparable, thermorégulation naturelle. Gamme haut de gamme.</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
+          <a href="#contact" class="btn-product">Demander un devis</a>
+        </div>
+      </div>
+
   </div>
 </section>
 
