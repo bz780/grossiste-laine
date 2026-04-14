@@ -44,11 +44,7 @@
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Catalogue laine en gros professionnel",
-    "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Laine Mérinos Extra-Fine en gros", "description": "100% mérinos superwash, 60 coloris, prix grossiste à partir de 2,90€ HT/pelote", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "2.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Baby Alpaga en gros", "description": "100% baby alpaga import Pérou, hypoallergénique, 25 coloris", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "4.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Mohair-Soie professionnel", "description": "70% kid mohair 30% soie, 35 coloris, fournisseur France", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "5.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cachemire grossiste", "description": "100% cachemire Mongolie, 18 coloris, achat en gros", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "8.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+    "itemListElement": [},},
       {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Coton biologique GOTS en gros", "description": "Certifié GOTS et Oeko-Tex, 80 coloris permanents", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}}
     ]
   },
@@ -501,9 +497,7 @@ footer a { color: rgba(255,255,255,.55); }
     <p class="origines-label">Fibres sélectionnées à la source</p>
     <div class="origines-grid">
       <div class="origine-pill"><span class="iso">AU</span> Mérinos Australie</div>
-      <div class="origine-pill"><span class="iso">PE</span> Alpaga Pérou &amp; Bolivie</div>
       <div class="origine-pill"><span class="iso">ZA</span> Kid Mohair Afrique du Sud</div>
-      <div class="origine-pill"><span class="iso">MN</span> Cachemire Mongolie</div>
       <div class="origine-pill"><span class="iso">FR</span> Mohair-soie France</div>
       <div class="origine-pill"><span class="iso bio">BIO</span> Coton bio certifié GOTS</div>
     </div>
@@ -520,7 +514,6 @@ footer a { color: rgba(255,255,255,.55); }
     <div class="filter-bar">
       <button class="filter-btn active" onclick="filterProducts('all', this)">Tout</button>
       <button class="filter-btn" onclick="filterProducts('merinos', this)">🐑 Mérinos</button>
-      <button class="filter-btn" onclick="filterProducts('alpaga', this)">🦙 Alpaga</button>
       <button class="filter-btn" onclick="filterProducts('mohair', this)">✨ Mohair</button>
       <button class="filter-btn" onclick="filterProducts('coton', this)">🌿 Coton</button>
       <button class="filter-btn" onclick="filterProducts('luxe', this)">👑 Luxe</button>
@@ -535,8 +528,8 @@ footer a { color: rgba(255,255,255,.55); }
           <div class="product-meta"><span class="meta-chip">100% Mérinos</span><span class="meta-chip">50g</span><span class="meta-chip">60 coloris</span></div>
           <div class="product-name">Laine Mérinos Extra-Fine</div>
           <p class="product-desc">Superwash, thermorégulatrice. La référence pelotes laine en gros. Idéale pull, bonnets, layette.</p>
-          <div class="product-pricing"><span class="price-new">2,90€</span><span class="price-old">4,50€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 100 pelotes</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
           <a href="#contact" class="btn-product">Demander un devis</a>
         </div>
       </div>
@@ -547,8 +540,8 @@ footer a { color: rgba(255,255,255,.55); }
           <div class="product-meta"><span class="meta-chip">100% Mérinos</span><span class="meta-chip">100g</span><span class="meta-chip">40 coloris</span></div>
           <div class="product-name">Mérinos Chunky Grossiste</div>
           <p class="product-desc">Grosse épaisseur, tricot rapide. Idéal plaids, pulls oversize, déco. Fort volume de vente.</p>
-          <div class="product-pricing"><span class="price-new">4,10€</span><span class="price-old">6,50€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 50 pelotes</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
           <a href="#contact" class="btn-product">Demander un devis</a>
         </div>
       </div>
@@ -559,121 +552,11 @@ footer a { color: rgba(255,255,255,.55); }
           <div class="product-meta"><span class="meta-chip">Mérinos DK</span><span class="meta-chip">50g</span><span class="meta-chip">50 coloris</span></div>
           <div class="product-name">Mérinos DK Superwash</div>
           <p class="product-desc">Épaisseur Double Knit, lavable machine. Le plus vendu en mercerie. Stock permanent 50 coloris.</p>
-          <div class="product-pricing"><span class="price-new">3,20€</span><span class="price-old">5,00€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 100 pelotes</p>
+          <div class="product-pricing"><span class="price-new">Sur demande</span></div>
+          <p class="product-moq">Minimum 100 pelotes</p>
           <a href="#contact" class="btn-product">Demander un devis</a>
         </div>
       </div>
-
-      <div class="product-card" data-cat="alpaga">
-        <div class="product-thumb"><img src="images/baby-alpaga-perou.webp" alt="Baby Alpaga Import Pérou — pelote rose pâle ultra-douce" loading="lazy" width="600" height="400"><span class="product-badge gold">Premium</span></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">100% Baby Alpaga</span><span class="meta-chip">100g</span><span class="meta-chip">25 coloris</span></div>
-          <div class="product-name">Baby Alpaga Import Pérou</div>
-          <p class="product-desc">Hypoallergénique, 7× plus chaud. Import direct, certification éthique. Laine alpaga grossiste.</p>
-          <div class="product-pricing"><span class="price-new">7,90€</span><span class="price-old">12,90€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 50 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="alpaga">
-        <div class="product-thumb"><img src="images/alpaga-royal-bolivie.webp" alt="Alpaga Royal Bolivie — fibre longue camel brillant sur ardoise" loading="lazy" width="600" height="400"></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">Alpaga Royal</span><span class="meta-chip">50g</span><span class="meta-chip">20 coloris</span></div>
-          <div class="product-name">Alpaga Royal Bolivie</div>
-          <p class="product-desc">Fibre longue, brillance soyeuse. Qualité supérieure au baby alpaga classique. Collection luxe.</p>
-          <div class="product-pricing"><span class="price-new">9,50€</span><span class="price-old">15,00€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 25 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="mohair">
-        <div class="product-thumb"><img src="images/mohair-soie-professionnel.webp" alt="Mohair-Soie Professionnel — pelote lavande halo soyeux" loading="lazy" width="600" height="400"><span class="product-badge">Pro</span></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">70% Mohair / 30% Soie</span><span class="meta-chip">25g</span><span class="meta-chip">35 coloris</span></div>
-          <div class="product-name">Mohair-Soie Professionnel</div>
-          <p class="product-desc">Kid mohair + soie, brillance exceptionnelle. Fournisseur mohair France. Référence créateurs de mode.</p>
-          <div class="product-pricing"><span class="price-new">4,20€</span><span class="price-old">6,90€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 100 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="mohair">
-        <div class="product-thumb"><img src="images/mohair-chunky-gros-volume.webp" alt="Mohair Chunky Gros Volume — pelote gris charbon effet nuage" loading="lazy" width="600" height="400"></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">80% Mohair</span><span class="meta-chip">50g</span><span class="meta-chip">20 coloris</span></div>
-          <div class="product-name">Mohair Chunky Gros Volume</div>
-          <p class="product-desc">Épaisseur bulky, effet nuage. Plaids, écharpes XXL, déco intérieure. Très forte demande hiver.</p>
-          <div class="product-pricing"><span class="price-new">5,80€</span><span class="price-old">9,20€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 50 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="coton">
-        <div class="product-thumb"><img src="images/coton-biologique-gots.webp" alt="Coton Biologique GOTS — pelote coton naturel et capsule de coton" loading="lazy" width="600" height="400"><span class="product-badge green">Bio GOTS</span></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">100% Coton Bio</span><span class="meta-chip">50g</span><span class="meta-chip">80 coloris</span></div>
-          <div class="product-name">Coton Biologique GOTS</div>
-          <p class="product-desc">Certifié GOTS & Oeko-Tex. Peigné égyptien, doux et résistant. Idéal crochet, layette, déco.</p>
-          <div class="product-pricing"><span class="price-new">2,10€</span><span class="price-old">3,90€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 100 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="coton">
-        <div class="product-thumb"><img src="images/coton-mercerse-brillant.webp" alt="Coton Mercerisé Brillant — pelote turquoise brillant sur surface blanche" loading="lazy" width="600" height="400"></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">Coton Mercerisé</span><span class="meta-chip">50g</span><span class="meta-chip">60 coloris</span></div>
-          <div class="product-name">Coton Mercerisé Brillant</div>
-          <p class="product-desc">Traitement mercerisé pour brillance naturelle, résistance accrue. Idéal doudous, articles bébé, mode été.</p>
-          <div class="product-pricing"><span class="price-new">1,90€</span><span class="price-old">3,20€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 100 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="luxe">
-        <div class="product-thumb"><img src="images/cachemire-pur-mongolie.webp" alt="Cachemire Pur Mongolie — pelote ivoire champagne sur velours sombre" loading="lazy" width="600" height="400"><span class="product-badge gold">Luxe</span></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">100% Cachemire</span><span class="meta-chip">25g</span><span class="meta-chip">18 coloris</span></div>
-          <div class="product-name">Cachemire Pur Mongolie</div>
-          <p class="product-desc">Duvet de chèvre, import Mongolie intérieure. Douceur absolue, chaleur incomparable. Fournisseur cachemire grossiste.</p>
-          <div class="product-pricing"><span class="price-new">14,90€</span><span class="price-old">24,00€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 25 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="luxe">
-        <div class="product-thumb"><img src="images/cachemire-alpaga-mix-luxe.webp" alt="Cachemire-Alpaga Mix Luxe — deux pelotes taupe champagne sur marbre" loading="lazy" width="600" height="400"></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">50% Cachemire / 50% Alpaga</span><span class="meta-chip">50g</span><span class="meta-chip">15 coloris</span></div>
-          <div class="product-name">Cachemire-Alpaga Mix Luxe</div>
-          <p class="product-desc">Alliance douceur-légèreté. Rapport qualité-prix optimal pour collections haut de gamme. Stock limité.</p>
-          <div class="product-pricing"><span class="price-new">11,90€</span><span class="price-old">18,90€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 25 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-      <div class="product-card" data-cat="recycle">
-        <div class="product-thumb"><img src="images/laine-recyclee-grs.webp" alt="Laine Recyclée Certifiée GRS — pelote chiné brun terracotta sur bois rustique" loading="lazy" width="600" height="400"><span class="product-badge green">GRS</span></div>
-        <div class="product-body">
-          <div class="product-meta"><span class="meta-chip">Laine Recyclée</span><span class="meta-chip">100g</span><span class="meta-chip">40 coloris</span></div>
-          <div class="product-name">Laine Recyclée Certifiée GRS</div>
-          <p class="product-desc">Fibres régénérées, cert. Global Recycled Standard. Empreinte carbone réduite. Pour marques RSE.</p>
-          <div class="product-pricing"><span class="price-new">2,40€</span><span class="price-old">3,70€</span><span class="price-unit">HT/pelote</span></div>
-          <p class="product-moq">À partir de 100 pelotes</p>
-          <a href="#contact" class="btn-product">Demander un devis</a>
-        </div>
-      </div>
-
-    </div>
   </div>
 </section>
 
