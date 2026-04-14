@@ -1034,6 +1034,12 @@ footer a { color: rgba(255,255,255,.55); }
           <button type="submit" class="btn-submit">Envoyer ma demande →</button>
           <p class="form-note">Réponse sous 24h · Sans engagement · Devis personnalisé</p>
         </form>
+      <div id="form-success" style="display:none;padding:18px 20px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;color:#166534;margin-top:16px;font-weight:500;font-size:.95rem;">
+        ✓ Votre demande a bien été envoyée. Nous vous répondrons sous 24h ouvrées.
+      </div>
+      <div id="form-error" style="display:none;padding:18px 20px;background:#fef2f2;border:1px solid #fca5a5;border-radius:8px;color:#991b1b;margin-top:16px;font-size:.95rem;">
+        ✗ Une erreur est survenue. Veuillez réessayer ou nous contacter directement par email.
+      </div>
       </div>
     </div>
   </div>
@@ -1069,5 +1075,53 @@ function filterProducts(cat, btn) {
 }
 </script>
 <!--/email_off-->
+
+<script>
+/* Formsubmit AJAX handler — auto-generated */
+(function () {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+
+  // Bloquer la soumission native (honeypot + AJAX)
+  form.setAttribute('novalidate', '');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    // Validation HTML5 manuelle
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+
+    const btn = form.querySelector('[type="submit"]');
+    const origText = btn.textContent;
+    btn.textContent = 'Envoi en cours…';
+    btn.disabled = true;
+
+    const successEl = document.getElementById('form-success');
+    const errorEl   = document.getElementById('form-error');
+    if (errorEl) errorEl.style.display = 'none';
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch('https://formsubmit.co/ajax/contact@le-reve-de-noel.com', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: data,
+      });
+      const json = await res.json();
+      if (json.success === 'true' || json.success === true) {
+        form.reset();
+        form.style.display = 'none';
+        if (successEl) successEl.style.display = 'block';
+      } else {
+        throw new Error('Formsubmit non-success');
+      }
+    } catch (err) {
+      btn.textContent = origText;
+      btn.disabled = false;
+      if (errorEl) errorEl.style.display = 'block';
+    }
+  });
+})();
+</script>
 </body>
 </html>
