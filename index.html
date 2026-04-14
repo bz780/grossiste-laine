@@ -45,11 +45,11 @@
     "@type": "OfferCatalog",
     "name": "Catalogue laine en gros professionnel",
     "itemListElement": [
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Laine Mérinos Extra-Fine en gros", "description": "100% mérinos superwash, 60 coloris, prix grossiste à partir de 2,90€ HT/pelote", "offers": {"@type": "Offer", "price": "2.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Baby Alpaga en gros", "description": "100% baby alpaga import Pérou, hypoallergénique, 25 coloris", "offers": {"@type": "Offer", "price": "4.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Mohair-Soie professionnel", "description": "70% kid mohair 30% soie, 35 coloris, fournisseur France", "offers": {"@type": "Offer", "price": "5.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cachemire grossiste", "description": "100% cachemire Mongolie, 18 coloris, achat en gros", "offers": {"@type": "Offer", "price": "8.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
-      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Coton biologique GOTS en gros", "description": "Certifié GOTS et Oeko-Tex, 80 coloris permanents", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}}
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Laine Mérinos Extra-Fine en gros", "description": "100% mérinos superwash, 60 coloris, prix grossiste à partir de 2,90€ HT/pelote", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "2.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Baby Alpaga en gros", "description": "100% baby alpaga import Pérou, hypoallergénique, 25 coloris", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "4.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Mohair-Soie professionnel", "description": "70% kid mohair 30% soie, 35 coloris, fournisseur France", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "5.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Cachemire grossiste", "description": "100% cachemire Mongolie, 18 coloris, achat en gros", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "8.90", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Coton biologique GOTS en gros", "description": "Certifié GOTS et Oeko-Tex, 80 coloris permanents", "image": "https://grossiste-laine.fr/images/hero.jpg", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR", "priceValidUntil": "2027-12-31", "availability": "https://schema.org/InStock", "url": "https://grossiste-laine.fr/#contact"}}}
     ]
   },
   "aggregateRating": {
@@ -158,26 +158,34 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 .btn-header:hover { background: var(--purple-dark); text-decoration: none; }
 
 /* HERO */
-.hero { background: linear-gradient(135deg, var(--ink) 0%, #2d1f4e 100%); color: var(--white); padding: 80px 0 72px; position: relative; overflow: hidden; }
-.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 50%, rgba(107,76,138,.4) 0%, transparent 60%); }
-.hero-inner { position: relative; display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center; }
+.hero { background: linear-gradient(145deg, #16102b 0%, #2d1f4e 55%, #3d1a3a 100%); color: var(--white); padding: 80px 0 64px; position: relative; overflow: hidden; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 75% 40%, rgba(107,76,138,.35) 0%, transparent 55%); pointer-events: none; }
+.hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(197,168,224,.4), transparent); }
+.hero-inner { position: relative; display: grid; grid-template-columns: 1fr 400px; gap: 56px; align-items: center; }
 .hero-content { position: relative; }
-.hero-photo { position: relative; border-radius: var(--radius); overflow: hidden; height: 380px; box-shadow: 0 20px 60px rgba(0,0,0,.4); }
-.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; opacity: .9; }
-.hero-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(107,76,138,.2) 0%, transparent 60%); }
-@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; } .hero-photo { display: none; } }
-.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 20px; padding: 5px 14px; font-size: .8rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: rgba(255,255,255,.9); margin-bottom: 24px; }
-.hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -.5px; }
+.hero-visual { position: relative; flex-shrink: 0; }
+.hero-img-main { border-radius: 20px; overflow: hidden; height: 420px; box-shadow: 0 28px 72px rgba(0,0,0,.55); position: relative; }
+.hero-img-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-img-main::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, transparent 50%, rgba(22,16,43,.5)); border-radius: 20px; }
+.hero-photo-badge { position: absolute; bottom: 16px; left: 16px; right: 16px; background: rgba(255,255,255,.95); color: var(--ink); border-radius: 12px; padding: 12px 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 4px 16px rgba(0,0,0,.25); backdrop-filter: blur(8px); z-index: 2; }
+.hero-photo-badge .badge-stars { color: #f59e0b; font-size: 1rem; letter-spacing: 1px; }
+.hero-photo-badge .badge-text { font-size: .82rem; font-weight: 600; color: var(--ink-light); }
+.hero-photo-badge .badge-text strong { color: var(--ink); display: block; font-size: .9rem; }
+.hero-palette { position: absolute; top: 16px; right: -16px; display: flex; flex-direction: column; gap: 8px; }
+.hero-palette-dot { width: 22px; height: 22px; border-radius: 50%; border: 2.5px solid rgba(255,255,255,.6); box-shadow: 0 2px 6px rgba(0,0,0,.3); }
+@media (max-width: 960px) { .hero-inner { grid-template-columns: 1fr; } .hero-visual { display: none; } }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(197,168,224,.12); border: 1px solid rgba(197,168,224,.25); border-radius: 20px; padding: 5px 16px; font-size: .78rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #c5a8e0; margin-bottom: 22px; }
+.hero h1 { font-size: clamp(2.1rem, 5vw, 3.3rem); font-weight: 900; line-height: 1.08; margin-bottom: 20px; letter-spacing: -.5px; }
 .hero h1 em { font-style: normal; color: #c5a8e0; }
-.hero-sub { font-size: 1.1rem; opacity: .85; margin-bottom: 36px; max-width: 520px; line-height: 1.6; }
-.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+.hero-sub { font-size: 1.05rem; opacity: .82; margin-bottom: 36px; max-width: 500px; line-height: 1.65; }
+.hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 44px; }
 .btn-primary { background: var(--purple); color: var(--white); padding: 14px 28px; border-radius: var(--radius-sm); font-weight: 700; font-size: 1rem; transition: transform .15s, box-shadow .15s, background .15s; box-shadow: 0 4px 18px rgba(107,76,138,.5); }
-.btn-primary:hover { background: #7d5aa0; transform: translateY(-1px); text-decoration: none; }
-.btn-secondary { background: rgba(255,255,255,.1); color: var(--white); border: 1.5px solid rgba(255,255,255,.3); padding: 14px 28px; border-radius: var(--radius-sm); font-weight: 600; font-size: 1rem; transition: background .15s; }
-.btn-secondary:hover { background: rgba(255,255,255,.18); text-decoration: none; }
-.hero-stats { display: flex; flex-wrap: wrap; gap: 32px; border-top: 1px solid rgba(255,255,255,.12); padding-top: 32px; }
-.hero-stat .num { font-size: 1.8rem; font-weight: 800; color: var(--white); }
-.hero-stat .label { font-size: .8rem; color: rgba(255,255,255,.6); }
+.btn-primary:hover { background: #7d5aa0; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(107,76,138,.6); text-decoration: none; }
+.btn-secondary { background: rgba(255,255,255,.08); color: var(--white); border: 1.5px solid rgba(255,255,255,.25); padding: 14px 28px; border-radius: var(--radius-sm); font-weight: 600; font-size: 1rem; transition: background .15s; }
+.btn-secondary:hover { background: rgba(255,255,255,.16); text-decoration: none; }
+.hero-stats { display: flex; flex-wrap: wrap; gap: 28px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 28px; }
+.hero-stat .num { font-size: 1.75rem; font-weight: 900; color: var(--white); line-height: 1; }
+.hero-stat .label { font-size: .75rem; color: rgba(255,255,255,.55); margin-top: 2px; }
 
 /* TRUST BAR */
 .trust-bar { background: var(--purple-dark); color: var(--white); padding: 16px 0; }
@@ -372,7 +380,7 @@ footer a { color: rgba(255,255,255,.55); }
   .trust-list { gap: 8px; }
 }
 </style>
-<link rel="preload" as="image" href="/images/hero.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="https://images.unsplash.com/photo-1596553421657-97e66c6c4a78?w=800&q=85" fetchpriority="high">
 <!--email_off-->
 </head>
 <body>
@@ -415,25 +423,42 @@ footer a { color: rgba(255,255,255,.55); }
 <section class="hero">
   <div class="container">
     <div class="hero-inner">
-    <div class="hero-content">
-      <div class="hero-eyebrow">🧶 Fournisseur laine en gros depuis 2009</div>
-      <h1>Votre grossiste <em>laine</em> professionnel en France</h1>
-      <p class="hero-sub">Plus de 5 000 références de laine en gros en stock permanent. Mérinos, alpaga, mohair, cachemire — prix dégressifs dès 50 pelotes, livraison express 24-48h, personnalisation possible.</p>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
-        <a href="#catalogue" class="btn-secondary">Voir le catalogue</a>
+      <div class="hero-content">
+        <div class="hero-eyebrow">🧶 Fournisseur grossiste laine depuis 2009</div>
+        <h1>Votre grossiste <em>laine</em><br>professionnel en France</h1>
+        <p class="hero-sub">Plus de 5 000 références de laine en gros en stock permanent. Mérinos, alpaga, mohair, cachemire — prix dégressifs dès 50 pelotes, livraison express 24‑48h, personnalisation possible.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-primary">Demander un devis gratuit</a>
+          <a href="#catalogue" class="btn-secondary">Voir le catalogue</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><div class="num">5 000+</div><div class="label">références en stock</div></div>
+          <div class="hero-stat"><div class="num">3 500+</div><div class="label">clients professionnels</div></div>
+          <div class="hero-stat"><div class="num">−40%</div><div class="label">remise max volume</div></div>
+          <div class="hero-stat"><div class="num">24h</div><div class="label">délai d'expédition</div></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="num">5 000+</div><div class="label">références en stock</div></div>
-        <div class="hero-stat"><div class="num">3 500+</div><div class="label">clients professionnels</div></div>
-        <div class="hero-stat"><div class="num">−40%</div><div class="label">remise max volume</div></div>
-        <div class="hero-stat"><div class="num">24h</div><div class="label">délai d'expédition</div></div>
+      <div class="hero-visual">
+        <div class="hero-img-main">
+          <img src="https://images.unsplash.com/photo-1596553421657-97e66c6c4a78?w=800&q=85" alt="Pelotes de laine colorées en stock grossiste — mérinos, alpaga, mohair" loading="eager" width="400" height="420">
+          <div class="hero-photo-badge">
+            <div>
+              <div class="badge-stars">★★★★★</div>
+              <div class="badge-text"><strong>4,9/5</strong> · 1 200 clients professionnels</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-palette">
+          <div class="hero-palette-dot" style="background:#e8d5c4;" title="Naturel"></div>
+          <div class="hero-palette-dot" style="background:#c0392b;" title="Rouge"></div>
+          <div class="hero-palette-dot" style="background:#2980b9;" title="Bleu"></div>
+          <div class="hero-palette-dot" style="background:#27ae60;" title="Vert"></div>
+          <div class="hero-palette-dot" style="background:#8e44ad;" title="Violet"></div>
+          <div class="hero-palette-dot" style="background:#f39c12;" title="Jaune"></div>
+          <div class="hero-palette-dot" style="background:#1a1a2e;" title="Anthracite"></div>
+          <div class="hero-palette-dot" style="background:#fff;" title="Blanc"></div>
+        </div>
       </div>
-    </div>
-    </div>
-    <div class="hero-photo">
-      <img src="/images/hero.jpg" alt="Pelotes de laine colorées — grossiste laine professionnel" loading="eager">
-    </div>
     </div>
   </div>
 </section>
@@ -453,10 +478,10 @@ footer a { color: rgba(255,255,255,.55); }
 
 <!-- PHOTO STRIP -->
 <div class="photo-strip">
-  <img src="/images/strip1.jpg" alt="Laine mérinos en gros — pelotes colorées">
-  <img src="/images/strip2.jpg" alt="Fil à tricoter professionnel — fournisseur laine">
-  <img src="/images/strip3.jpg" alt="Laine alpaga en gros — qualité premium">
-  <img src="/images/strip4.jpg" alt="Grossiste laine tricot — stock permanent">
+  <img src="https://images.unsplash.com/photo-1583394293214-b3f3d7d0ee84?w=600&q=80" alt="Laine mérinos en gros — pelotes colorées fournisseur professionnel" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1606791422814-b32c705e3e2f?w=600&q=80" alt="Fil à tricoter professionnel — stock grossiste laine" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80" alt="Laine alpaga et mohair en gros — qualité premium" loading="lazy">
+  <img src="https://images.unsplash.com/photo-1614036634896-1e7dbc87e17b?w=600&q=80" alt="Grossiste laine tricot — livraison 24h France" loading="lazy">
 </div>
 
 <!-- INTRO SEO -->
