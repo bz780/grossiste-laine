@@ -1092,6 +1092,7 @@ function filterProducts(cat, btn) {
     if (!form.checkValidity()) { form.reportValidity(); return; }
 
     const btn = form.querySelector('[type="submit"]');
+    if (btn.disabled) return;
     const origText = btn.textContent;
     btn.textContent = 'Envoi en cours…';
     btn.disabled = true;
