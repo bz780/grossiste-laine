@@ -380,7 +380,6 @@ footer a { color: rgba(255,255,255,.55); }
 </style>
 <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 <!--email_off-->
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </head>
 <body>
 
@@ -1038,8 +1037,6 @@ footer a { color: rgba(255,255,255,.55); }
             <label>Votre besoin</label>
             <textarea placeholder="Fibres souhaitées, volumes estimés, personnalisation..." name="message"></textarea>
           </div>
-          
-<div class="cf-turnstile" data-sitekey="0x4AAAAAADFQDtKGYbZUTtyX" data-theme="light" data-size="flexible" style="margin:14px 0"></div>
 <button type="submit" class="btn-submit">Envoyer ma demande →</button>
           <p class="form-note">Réponse sous 24h · Sans engagement · Devis personnalisé</p>
         </form>
@@ -1107,16 +1104,7 @@ function filterProducts(cat, btn) {
 
     // Anti-bot : honeypot _gotcha
     const gotcha = form.querySelector('input[name="_gotcha"]');
-    if (gotcha && gotcha.value) return;
-
-    // Anti-bot : Turnstile token
-    const tsResp = form.querySelector('[name="cf-turnstile-response"]');
-    if (!tsResp || !tsResp.value) {
-      const errorEl = document.getElementById('form-error');
-      if (errorEl) {
-        errorEl.textContent = '✗ Veuillez compléter la vérification anti-robot avant d\'envoyer.';
-        errorEl.style.display = 'block';
-      } else {
+    if (gotcha && gotcha.value) return; else {
         alert('Veuillez compléter la vérification anti-robot.');
       }
       return;
