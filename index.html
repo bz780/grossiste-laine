@@ -380,6 +380,7 @@ footer a { color: rgba(255,255,255,.55); }
 </style>
 <link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 <!--email_off-->
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
 </head>
 <body>
 
@@ -994,30 +995,36 @@ footer a { color: rgba(255,255,255,.55); }
       </div>
       <div class="contact-form-box">
         <h3>Formulaire de devis gratuit</h3>
-        <form>
+        <form class="contact-form" novalidate>
+<input type="hidden" name="_subject" value="Demande devis — grossiste laine">
+<input type="hidden" name="_honeypot" value="">
+<input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="text" name="_gotcha" style="display:none !important;position:absolute;left:-9999px" tabindex="-1" autocomplete="off" aria-hidden="true">
+<input type="hidden" name="_form_started_at" value="">
           <div class="form-row">
             <div class="form-group">
               <label>Prénom & Nom *</label>
-              <input type="text" placeholder="Marie Martin" required>
+              <input type="text" placeholder="Marie Martin" required name="nom">
             </div>
             <div class="form-group">
               <label>Société</label>
-              <input type="text" placeholder="Atelier du Fil">
+              <input type="text" placeholder="Atelier du Fil" name="societe">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Email *</label>
-              <input type="email" placeholder="contact@votreboutique.fr" required>
+              <input type="email" placeholder="contact@votreboutique.fr" required name="email">
             </div>
             <div class="form-group">
               <label>Téléphone</label>
-              <input type="tel" placeholder="06 12 34 56 78">
+              <input type="tel" placeholder="06 12 34 56 78" name="tel">
             </div>
           </div>
           <div class="form-group">
             <label for="structure-type">Type de structure *</label>
-            <select id="structure-type" required>
+            <select id="structure-type" required name="type">
               <option value="">Sélectionner...</option>
               <option>Boutique / mercerie</option>
               <option>Atelier / école de tricot</option>
@@ -1029,9 +1036,11 @@ footer a { color: rgba(255,255,255,.55); }
           </div>
           <div class="form-group">
             <label>Votre besoin</label>
-            <textarea placeholder="Fibres souhaitées, volumes estimés, personnalisation..."></textarea>
+            <textarea placeholder="Fibres souhaitées, volumes estimés, personnalisation..." name="message"></textarea>
           </div>
-          <button type="submit" class="btn-submit">Envoyer ma demande →</button>
+          
+<div class="cf-turnstile" data-sitekey="0x4AAAAAADFQDtKGYbZUTtyX" data-theme="light" data-size="flexible" style="margin:14px 0"></div>
+<button type="submit" class="btn-submit">Envoyer ma demande →</button>
           <p class="form-note">Réponse sous 24h · Sans engagement · Devis personnalisé</p>
         </form>
       <div id="form-success" style="display:none;padding:18px 20px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;color:#166534;margin-top:16px;font-weight:500;font-size:.95rem;">
@@ -1077,18 +1086,42 @@ function filterProducts(cat, btn) {
 <!--/email_off-->
 
 <script>
-/* Formsubmit AJAX handler — auto-generated */
+/* Formsubmit AJAX handler — v2 (turnstile+timing) */
 (function () {
   const form = document.querySelector('.contact-form');
   if (!form) return;
-
-  // Bloquer la soumission native (honeypot + AJAX)
   form.setAttribute('novalidate', '');
+
+  const formStartTime = Date.now();
+  const tsField = form.querySelector('input[name="_form_started_at"]');
+  if (tsField) tsField.value = String(formStartTime);
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    // Validation HTML5 manuelle
+    // Anti-bot : timing
+    if (Date.now() - formStartTime < 2000) {
+      // bot probable, ignorer silencieusement
+      return;
+    }
+
+    // Anti-bot : honeypot _gotcha
+    const gotcha = form.querySelector('input[name="_gotcha"]');
+    if (gotcha && gotcha.value) return;
+
+    // Anti-bot : Turnstile token
+    const tsResp = form.querySelector('[name="cf-turnstile-response"]');
+    if (!tsResp || !tsResp.value) {
+      const errorEl = document.getElementById('form-error');
+      if (errorEl) {
+        errorEl.textContent = '✗ Veuillez compléter la vérification anti-robot avant d\'envoyer.';
+        errorEl.style.display = 'block';
+      } else {
+        alert('Veuillez compléter la vérification anti-robot.');
+      }
+      return;
+    }
+
     if (!form.checkValidity()) { form.reportValidity(); return; }
 
     const btn = form.querySelector('[type="submit"]');
@@ -1122,7 +1155,6 @@ function filterProducts(cat, btn) {
       if (errorEl) errorEl.style.display = 'block';
     }
   });
-})();
-</script>
+})();</script>
 </body>
 </html>
