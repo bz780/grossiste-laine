@@ -210,10 +210,17 @@ header { background: var(--white); border-bottom: 1px solid var(--border); posit
 .origine-pill .iso.bio { background: var(--green); }
 
 /* FILTERS */
-.filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+.filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; align-items: center; }
 .filter-btn { background: var(--white); border: 1.5px solid var(--border); border-radius: 30px; padding: 8px 18px; font-size: .85rem; font-weight: 600; color: var(--ink-light); cursor: pointer; transition: all .15s; font-family: inherit; }
-.filter-btn:hover { border-color: var(--purple); color: var(--purple); }
+.filter-btn:hover:not([disabled]) { border-color: var(--purple); color: var(--purple); }
 .filter-btn.active { background: var(--purple); border-color: var(--purple); color: var(--white); }
+.filter-btn[disabled] { opacity: .35; cursor: not-allowed; }
+.filter-meta { display: flex; gap: 16px; align-items: center; margin-bottom: 24px; font-size: .82rem; color: var(--ink-light); }
+.filter-meta .reset-link { background: none; border: none; color: var(--purple); font-weight: 700; cursor: pointer; padding: 0; font-family: inherit; font-size: inherit; text-decoration: underline; }
+.filter-meta .reset-link[hidden] { display: none; }
+.filter-empty { text-align: center; padding: 30px 20px; color: var(--ink-light); font-size: .92rem; background: var(--white); border: 1px dashed var(--border); border-radius: var(--radius-sm); display: none; }
+.filter-empty.show { display: block; }
+.filter-empty button { background: var(--purple); color: #fff; border: none; padding: 8px 16px; border-radius: 8px; font-weight: 600; cursor: pointer; margin-left: 8px; font-family: inherit; }
 
 /* CATALOGUE */
 .catalogue-section { background: var(--bg); }
@@ -511,13 +518,21 @@ footer a { color: rgba(255,255,255,.55); }
     <h2 class="section-title">Nos laines en gros — 5 000 références</h2>
     <p class="section-desc">Réassort hebdomadaire. Prix en HT, remise Starter (−15%) déjà appliquée.</p>
 
-    <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterProducts('all', this)">Tout</button>
-      <button class="filter-btn" onclick="filterProducts('merinos', this)">🐑 Mérinos</button>
-      <button class="filter-btn" onclick="filterProducts('mohair', this)">✨ Mohair</button>
-      <button class="filter-btn" onclick="filterProducts('coton', this)">🌿 Coton</button>
-      <button class="filter-btn" onclick="filterProducts('luxe', this)">👑 Luxe</button>
-      <button class="filter-btn" onclick="filterProducts('recycle', this)">♻️ Recyclé</button>
+    <div class="filter-bar" data-filter-bar>
+      <button class="filter-btn active" data-cat="all">Tout</button>
+      <button class="filter-btn" data-cat="merinos">🐑 Mérinos</button>
+      <button class="filter-btn" data-cat="mohair">✨ Mohair</button>
+      <button class="filter-btn" data-cat="coton">🌿 Coton</button>
+      <button class="filter-btn" data-cat="luxe">👑 Luxe</button>
+      <button class="filter-btn" data-cat="recycle">♻️ Recyclé</button>
+    </div>
+    <div class="filter-meta">
+      <span class="filter-count" data-filter-count>9 / 9 références affichées</span>
+      <button type="button" class="reset-link" data-filter-reset hidden>Réinitialiser</button>
+    </div>
+    <div class="filter-empty" data-filter-empty>
+      Aucune référence ne correspond à ce filtre.
+      <button type="button" data-filter-reset-inline>Réinitialiser</button>
     </div>
 
     <div class="products-grid" id="productsGrid">
@@ -1072,13 +1087,54 @@ footer a { color: rgba(255,255,255,.55); }
 </footer>
 
 <script>
-function filterProducts(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  document.querySelectorAll('.product-card').forEach(card => {
-    card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+/* Filtres dynamiques avec compteurs + désactivation 0-result */
+(function () {
+  const bar = document.querySelector('[data-filter-bar]');
+  if (!bar) return;
+  const cards = Array.from(document.querySelectorAll('.product-card'));
+  const countEl = document.querySelector('[data-filter-count]');
+  const resetEl = document.querySelector('[data-filter-reset]');
+  const emptyEl = document.querySelector('[data-filter-empty]');
+  const resetInline = document.querySelector('[data-filter-reset-inline]');
+  const total = cards.length;
+
+  function counts() {
+    const c = { all: total };
+    cards.forEach(card => { const cat = card.dataset.cat; c[cat] = (c[cat] || 0) + 1; });
+    return c;
+  }
+
+  function apply(activeCat) {
+    const cnt = counts();
+    let visible = 0;
+    cards.forEach(card => {
+      const match = activeCat === 'all' || card.dataset.cat === activeCat;
+      card.style.display = match ? '' : 'none';
+      if (match) visible++;
+    });
+    bar.querySelectorAll('.filter-btn').forEach(btn => {
+      const cat = btn.dataset.cat;
+      const n = cnt[cat] || 0;
+      btn.classList.toggle('active', cat === activeCat);
+      const baseLabel = btn.textContent.replace(/\s*\(\d+\)\s*$/, '').trim();
+      btn.dataset.baseLabel = btn.dataset.baseLabel || baseLabel;
+      btn.textContent = btn.dataset.baseLabel + (cat === 'all' ? '' : ' (' + n + ')');
+      if (cat !== 'all' && n === 0) btn.setAttribute('disabled', ''); else btn.removeAttribute('disabled');
+    });
+    countEl.textContent = visible + ' / ' + total + ' référence' + (total > 1 ? 's' : '') + ' affichée' + (visible > 1 ? 's' : '');
+    if (resetEl) resetEl.hidden = (activeCat === 'all');
+    if (emptyEl) emptyEl.classList.toggle('show', visible === 0);
+  }
+
+  bar.addEventListener('click', e => {
+    const btn = e.target.closest('.filter-btn');
+    if (!btn || btn.hasAttribute('disabled')) return;
+    apply(btn.dataset.cat);
   });
-}
+  if (resetEl) resetEl.addEventListener('click', () => apply('all'));
+  if (resetInline) resetInline.addEventListener('click', () => apply('all'));
+  apply('all');
+})();
 </script>
 <!--/email_off-->
 
